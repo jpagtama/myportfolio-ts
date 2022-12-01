@@ -1,0 +1,40 @@
+.nav {
+    position: sticky;
+    z-index: 100;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-start;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 6rem;
+    max-height: 100%;
+    overflow: hidden;
+    background-color:darkolivegreen;
+    box-shadow: 0 3px 15px 5px rgba(0,0,0,0.2);
+}
+.openMenu {
+    transition: height 400ms ease-in-out;
+    height: 26rem;
+}
+.closeMenu {
+    transition: height 400ms ease-in-out;
+    height: 6rem;
+}
+
+@media (min-width: 768px) {
+    .nav {
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        top: 0;
+        left: 0;
+        width: 15rem;
+        height: 100%;
+        background-color:darkolivegreen;
+    }
+}

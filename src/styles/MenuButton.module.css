@@ -1,0 +1,48 @@
+.menuButton {
+    display: block;
+    /* padding: 0.8rem 0.1rem; */
+    margin-left: 3rem;
+    margin-top: 1rem;
+    background-color: transparent;
+    border: none;
+    display:flex;
+    flex-direction:column;
+    width:70px;
+    cursor:pointer;
+}
+
+.menuButton span{
+    background: ivory;
+    border-radius:10px;
+    height:7px;
+    margin: 7px 0;
+    transition: .4s  cubic-bezier(0.69, -0.6, 0.32, 1.6);
+}
+.top {
+    width:50%;
+}
+.mid {
+    width:100%;
+}
+.bottom {
+    width:60%;
+}
+.animateTopToX {
+    transform-origin:bottom;
+    transform:rotatez(45deg) translate(9px,3px)
+}
+.animateMidToX {
+    transform-origin:top;
+    transform:rotatez(-45deg)
+}
+.animateBottomToX {
+    transform-origin:bottom;
+    width:50%;
+    transform: translate(25px,-13px) rotatez(45deg);
+}
+
+@media (min-width: 768px) {
+    .menuButton {
+        display: none;
+    }
+}

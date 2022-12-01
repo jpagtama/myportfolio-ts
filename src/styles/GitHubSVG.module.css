@@ -1,0 +1,23 @@
+.svg {
+    height: 5rem;
+    width: 5rem;
+}
+.svg:hover {
+    cursor: pointer;
+}
+.svg:hover .gitHubMascot {
+    transform: translateY(3%);
+}
+.svg:hover .gitHubText {
+    transform: translateY(100%);
+}
+
+.gitHubMascot {
+    transform: translateY(-100%);
+}
+/* #linkedInText {
+
+} */
+.gitHubMascot, .gitHubText {
+    transition: all 0.5s ease;
+}
