@@ -1,4 +1,4 @@
-import styles from '../../styles/personal/Section.module.css'
+import styles from '../styles/Section.module.css'
 
 interface Props {
     children: JSX.Element

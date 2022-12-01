@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import { useDispatch } from 'react-redux'
 import { useInView } from 'react-intersection-observer'
 import { navActions } from '../store/navSlice'
-import styles from '../../styles/personal/Interests.module.css'
+import styles from '../styles/Interests.module.css'
 
 const Interests = () => {
     const dispatch = useDispatch()

@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux'
 import { useInView } from 'react-intersection-observer'
 import { navActions } from '../store/navSlice'
 import CheckMark from './CheckMark'
-import styles from '../../styles/personal/Skills.module.css'
+import styles from '../styles/Skills.module.css'
 
 const Skills = () => {
     const dispatch = useDispatch();

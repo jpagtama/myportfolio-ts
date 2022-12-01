@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux';
 import LinkedInSVG from './LinkedInSVG';
 import GitHubSVG from './GitHubSVG';
 import { useInView } from 'react-intersection-observer';
-import styles from '../../styles/About.module.css';
+import styles from '../styles/About.module.css';
 
 
 const About = () => {

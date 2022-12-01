@@ -7,7 +7,7 @@ import Skills from './Skills'
 import Education from './Education'
 import Interests from './Interests'
 import Footer from './Footer'
-import styles from '../../styles/personal/Main.module.css'
+import styles from '../styles/Main.module.css'
 
 const Main = () => {
 

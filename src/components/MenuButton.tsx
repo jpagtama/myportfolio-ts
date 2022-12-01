@@ -1,6 +1,6 @@
 import { navActions } from '../store/navSlice'
 import { useSelector, useDispatch } from 'react-redux'
-import styles from '../../styles/personal/MenuButton.module.css'
+import styles from '../styles/MenuButton.module.css'
 
 interface Selector {
     nav: { showMenu: boolean }

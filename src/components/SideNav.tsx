@@ -1,7 +1,7 @@
 import Menu from './Menu'
 import { useSelector } from 'react-redux'
 import ProfilePic from './ProfilePic'
-import styles from '../../styles/personal/SideNav.module.css'
+import styles from '../styles/SideNav.module.css'
 
 interface Selector {
     nav: { showMenu: boolean }

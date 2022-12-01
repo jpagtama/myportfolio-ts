@@ -1,4 +1,4 @@
-import styles from '../../styles/personal/MenuItem.module.css'
+import styles from '../styles/MenuItem.module.css'
 
 interface Props {
     title: string

@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '../../styles/personal/CheckMark.module.css';
+import styles from '../styles/CheckMark.module.css';
 
 interface Props {
     className: string

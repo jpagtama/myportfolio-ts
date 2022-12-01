@@ -1,5 +1,5 @@
 import pic from '../assets/julianpagtama.png'
-import styles from '../styles/personal/ProfilePic.module.css'
+import styles from '../styles/ProfilePic.module.css'
 
 const ProfilePic = () => {
     return (

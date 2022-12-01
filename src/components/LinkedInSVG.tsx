@@ -1,4 +1,4 @@
-import styles from '../../../styles/personal/LinkedInSVG.module.css'
+import styles from '../styles/LinkedInSVG.module.css'
 
 const LinkedInSVG = () => {
     // rgb(85,107,47)

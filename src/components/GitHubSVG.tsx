@@ -1,4 +1,4 @@
-import styles from '../../../styles/personal/GitHubSVG.module.css'
+import styles from '../styles/GitHubSVG.module.css'
 
 const GitHubSVG = () => {
     return (

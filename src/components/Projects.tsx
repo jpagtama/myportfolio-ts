@@ -2,8 +2,8 @@ import React, { useEffect } from 'react'
 import { useDispatch } from 'react-redux'
 import { useInView } from 'react-intersection-observer'
 import { navActions } from '../store/navSlice'
-import flekinGif from '../../assets/flekin_med.gif'
-import styles from '../../styles/personal/Projects.module.css'
+import flekinGif from '../assets/flekin_med.gif'
+import styles from '../styles/Projects.module.css'
 
 const Projects = () => {
     const dispatch = useDispatch()

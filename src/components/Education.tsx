@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import { useDispatch } from 'react-redux'
 import { navActions } from '../store/navSlice'
 import { useInView } from 'react-intersection-observer'
-import styles from '../../styles/personal/Education.module.css'
+import styles from '../styles/Education.module.css'
 
 const Education = () => {
     const dispatch = useDispatch()

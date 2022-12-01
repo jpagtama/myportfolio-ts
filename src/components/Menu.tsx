@@ -1,7 +1,7 @@
 import MenuItem from './MenuItem'
 import { useSelector } from 'react-redux'
 import MenuButton from './MenuButton'
-import styles from '../../styles/personal/Menu.module.css'
+import styles from '../styles/Menu.module.css'
 
 interface Selector {
     nav: { active: string }
