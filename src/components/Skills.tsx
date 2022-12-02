@@ -49,9 +49,9 @@ const Skills = () => {
                     <li><CheckMark className={`${styles.checkMarkInit} ${toolsInView ? styles.animateCheckMark3 : ''}`} /><span>PostgreSQL</span></li>
                     <li><CheckMark className={`${styles.checkMarkInit} ${toolsInView ? styles.animateCheckMark4 : ''}`} /><span>GitHub</span></li>
                     <li><CheckMark className={`${styles.checkMarkInit} ${toolsInView ? styles.animateCheckMark5 : ''}`} /><span>Jest</span></li>
-                    <li><CheckMark className={`${styles.checkMarkInit} ${toolsInView ? styles.animateCheckMark6 : ''}`} /><span>MacOS</span></li>
-                    <li><CheckMark className={`${styles.checkMarkInit} ${toolsInView ? styles.animateCheckMark7 : ''}`} /><span>Windows</span></li>
-                    <li><CheckMark className={`${styles.checkMarkInit} ${toolsInView ? styles.animateCheckMark8 : ''}`} /><span>SourceTree</span></li>
+                    <li><CheckMark className={`${styles.checkMarkInit} ${toolsInView ? styles.animateCheckMark6 : ''}`} /><span>Vite</span></li>
+                    <li><CheckMark className={`${styles.checkMarkInit} ${toolsInView ? styles.animateCheckMark7 : ''}`} /><span>MacOS</span></li>
+                    <li><CheckMark className={`${styles.checkMarkInit} ${toolsInView ? styles.animateCheckMark8 : ''}`} /><span>Windows</span></li>
                     <li><CheckMark className={`${styles.checkMarkInit} ${toolsInView ? styles.animateCheckMark9 : ''}`} /><span>JIRA</span></li>
                 </ul>
             </div>
