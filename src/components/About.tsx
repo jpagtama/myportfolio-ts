@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import { navActions } from '../store/navSlice'
 import { useDispatch } from 'react-redux'
-import LinkedInSVG from './LinkedInSVG'
-import GitHubSVG from './GitHubSVG'
+import { FaLinkedin, FaGithub } from 'react-icons/fa'
+import { IconContext } from 'react-icons/lib'
 import { useInView } from 'react-intersection-observer'
 import styles from '../styles/About.module.css'
-
 
 const About = () => {
     const dispatch = useDispatch()
@@ -50,8 +49,12 @@ const About = () => {
                     I have more than 6 years of software development experience in high volume applications where I aim to ensure scalability, optimize performance, and utilize best security practices.
                 </p>
                 <div className={styles.links} >
-                    <a ref={linkedInRef} className={`${linkedInView && styles.animateLinkedIn}`} href="https://www.linkedin.com/in/jpagtama/" target="_blank" rel="noreferrer"><LinkedInSVG /></a>
-                    <a ref={gitHubRef} className={`${gitHubInView && styles.animateGitHub}`} href="https://github.com/jpagtama" target="_blank" rel="noreferrer"><GitHubSVG /></a>
+                    <a ref={linkedInRef} className={`${linkedInView && styles.animateLinkedIn}`} href="https://www.linkedin.com/in/jpagtama/" target="_blank" rel="noreferrer" >
+                        <IconContext.Provider value={{ color: "darkolivegreen", size: "5em" }}><FaLinkedin /></IconContext.Provider>
+                    </a>
+                    <a ref={gitHubRef} className={`${gitHubInView && styles.animateGitHub}`} href="https://github.com/jpagtama" target="_blank" rel="noreferrer">
+                        <IconContext.Provider value={{ color: "darkolivegreen", size: "5em" }}><FaGithub /></IconContext.Provider>
+                    </a>
                 </div>
             </div>
         </React.Fragment>
