@@ -5,12 +5,15 @@
     display: flex;
     flex-direction: column;
     align-items: stretch;
-    overflow:hidden;
+    overflow: hidden;
 }
+
 .headingContainer h1 {
     color: ivory;
     margin: 0;
+    opacity: 0%;
 }
+
 .educationInfo {
     display: flex;
     flex-direction: column;
@@ -18,18 +21,22 @@
     align-items: stretch;
     padding: 0 1rem;
 }
+
 .collegeInfo {
     order: 2;
 }
+
 .collegeInfo h2 {
     color: darkslategray;
     font-weight: 350;
 }
+
 .collegeInfo h3 {
-    font-family:'Playfair Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    font-family: 'Playfair Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
     font-size: 1.3rem;
     text-transform: none;
 }
+
 .attendanceDates {
     font-size: 1rem;
     font-weight: 400;
@@ -39,18 +46,28 @@
     order: 1;
     text-align: center;
 }
+
 .slideIn {
     animation: fromRight 400ms ease-in-out both;
 }
 
 @keyframes fromRight {
-    0% { transform: translateX(75%); opacity: 0%;}
-    100% { transform: translateX(0%); opacity: 100%; }
+    0% {
+        transform: translateX(50px);
+        opacity: 0%;
+    }
+
+    100% {
+        transform: translateX(0%);
+        opacity: 100%;
+    }
 }
+
 @media (min-width: 768px) {
     .headingContainer {
         padding: 4rem 3rem;
     }
+
     .educationInfo {
         display: flex;
         flex-direction: row;
@@ -58,9 +75,11 @@
         align-items: stretch;
         padding: 0 3rem;
     }
+
     .collegeInfo {
         order: 1;
     }
+
     .attendanceDates {
         margin: 0;
         order: 2;

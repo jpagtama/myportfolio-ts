@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { navActions } from '../store/navSlice'
 import { useInView } from 'react-intersection-observer'
@@ -18,16 +18,24 @@ const Experience = () => {
         triggerOnce: true
     })
 
+    const [alreadyViewed, setAlreadyViewed] = useState(false)
+
     useEffect(() => {
         if (expInView) dispatch(navActions.activate('experience'))
     }, [expInView, dispatch])
 
+    useEffect(() => {
+        if (expInView && !alreadyViewed) {
+            setAlreadyViewed(true)
+        }
+    }, [expInView, alreadyViewed])
+
     return (
         <>
             <div id="Experience" className={styles.headingContainer} >
-                <h1 ref={expRef} className={`${styles.heading} ${expInView ? styles.slideIn : ''}`}>Experience</h1>
+                <h1 ref={expRef} className={`${styles.heading} ${alreadyViewed ? styles.slideIn : ''}`}>Experience</h1>
             </div>
-            <div ref={firstSummaryRef} className={`${styles.container} ${firstSummaryInView ? styles.firstSummary : ''}`}>
+            <div ref={firstSummaryRef} className={`${styles.container} ${styles.summary} ${firstSummaryInView ? styles.firstSummary : ''}`}>
                 <span className={styles.workDetails}>
                     <h2>Software Developer</h2>
                     <h3>Regal Medical Group</h3>

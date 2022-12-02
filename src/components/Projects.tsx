@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { useInView } from 'react-intersection-observer'
 import { navActions } from '../store/navSlice'
@@ -10,14 +10,22 @@ const Projects = () => {
     const { ref, inView } = useInView({
         threshold: 0,
     })
+    const [alreadyViewed, setAlreadyViewed] = useState(false)
+
     useEffect(() => {
         if (inView) dispatch(navActions.activate('projects'))
     }, [inView, dispatch])
 
+    useEffect(() => {
+        if (inView && !alreadyViewed) {
+            setAlreadyViewed(true)
+        }
+    }, [inView, alreadyViewed])
+
     return (
         <>
             <div id="Projects" className={styles.headingContainer}>
-                <h1 ref={ref} className={inView ? styles.slideIn : ''}>Projects</h1>
+                <h1 ref={ref} className={alreadyViewed ? styles.slideIn : ''}>Projects</h1>
             </div>
             <div className={styles.projContainer}>
                 <img className={styles.demoGif} src={flekinGif} alt="flekin" />

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { navActions } from '../store/navSlice';
 import { useDispatch } from 'react-redux';
 import LinkedInSVG from './LinkedInSVG';
@@ -25,14 +25,24 @@ const About = () => {
         triggerOnce: true
     });
 
+    const [alreadyViewed, setAlreadyViewed] = useState(false)
+
     useEffect(() => {
-        if (aboutInView) dispatch(navActions.activate('about'));
+        if (aboutInView) {
+            dispatch(navActions.activate('about'))
+        }
     }, [aboutInView, dispatch]);
+
+    useEffect(() => {
+        if (aboutInView && !alreadyViewed) {
+            setAlreadyViewed(true)
+        }
+    }, [aboutInView, alreadyViewed])
 
     return (
         <React.Fragment>
             <div id="About" className={styles.headingContainer}>
-                <h1 ref={aboutRef} className={aboutInView ? styles.slideIn : ''}>Julian Pagtama</h1>
+                <h1 ref={aboutRef} className={alreadyViewed ? styles.slideIn : ''}>Julian Pagtama</h1>
                 <h3>Software Developer &bull; Los Angeles, CA &bull; jpagtama@gmail.com</h3>
             </div>
             <div className={styles.summaryContainer}>

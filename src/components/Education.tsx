@@ -1,10 +1,11 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { navActions } from '../store/navSlice'
 import { useInView } from 'react-intersection-observer'
 import styles from '../styles/Education.module.css'
 
 const Education = () => {
+    const [alreadyViewed, setAlreadyViewed] = useState(false)
     const dispatch = useDispatch()
     const { ref, inView } = useInView({
         threshold: 0,
@@ -13,10 +14,16 @@ const Education = () => {
         if (inView) dispatch(navActions.activate('education'))
     }, [inView, dispatch])
 
+    useEffect(() => {
+        if (inView && !alreadyViewed) {
+            setAlreadyViewed(true)
+        }
+    }, [inView, alreadyViewed])
+
     return (
         <React.Fragment>
             <div id="Education" className={styles.headingContainer}>
-                <h1 ref={ref} className={inView ? styles.slideIn : ''} >Education</h1>
+                <h1 ref={ref} className={alreadyViewed ? styles.slideIn : ''} >Education</h1>
             </div>
             <div className={`${styles.educationInfo}`} >
                 <span className={styles.collegeInfo}>

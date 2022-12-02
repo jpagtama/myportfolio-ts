@@ -5,18 +5,23 @@
     display: flex;
     flex-direction: column;
     align-items: stretch;
-    overflow:hidden;
+    overflow: hidden;
 }
+
 .headingContainer h1 {
     color: ivory;
     margin: 0;
+    opacity: 0%;
 }
+
 .list {
     list-style-type: none;
 }
+
 .skillList {
     padding: 3rem 0;
 }
+
 .skillList ul {
     display: flex;
     justify-content: center;
@@ -27,6 +32,7 @@
     font-size: 1.0rem;
     font-weight: 500;
 }
+
 .skillList ul li {
     display: flex;
     flex-direction: column;
@@ -38,6 +44,7 @@
     border-radius: 12px;
     overflow: hidden;
 }
+
 .skillList ul li span {
     background-color: darkolivegreen;
     width: 100%;
@@ -45,40 +52,85 @@
     color: ivory;
     text-align: center;
 }
+
 .slideIn {
     animation: fromRight 400ms ease-in-out both;
 }
+
 .checkMarkInit {
     stroke-dasharray: 20.5;
     stroke-dashoffset: 20.5;
 }
-.animateCheckMark1 { animation: animateCheck 150ms ease-in 100ms both }
-.animateCheckMark2 { animation: animateCheck 150ms ease-in 200ms both }
-.animateCheckMark3 { animation: animateCheck 150ms ease-in 300ms both }
-.animateCheckMark4 { animation: animateCheck 150ms ease-in 400ms both }
-.animateCheckMark5 { animation: animateCheck 150ms ease-in 500ms both }
-.animateCheckMark6 { animation: animateCheck 150ms ease-in 600ms both }
-.animateCheckMark7 { animation: animateCheck 150ms ease-in 700ms both }
-.animateCheckMark8 { animation: animateCheck 150ms ease-in 800ms both }
-.animateCheckMark9 { animation: animateCheck 150ms ease-in 900ms both }
+
+.animateCheckMark1 {
+    animation: animateCheck 150ms ease-in 100ms both
+}
+
+.animateCheckMark2 {
+    animation: animateCheck 150ms ease-in 200ms both
+}
+
+.animateCheckMark3 {
+    animation: animateCheck 150ms ease-in 300ms both
+}
+
+.animateCheckMark4 {
+    animation: animateCheck 150ms ease-in 400ms both
+}
+
+.animateCheckMark5 {
+    animation: animateCheck 150ms ease-in 500ms both
+}
+
+.animateCheckMark6 {
+    animation: animateCheck 150ms ease-in 600ms both
+}
+
+.animateCheckMark7 {
+    animation: animateCheck 150ms ease-in 700ms both
+}
+
+.animateCheckMark8 {
+    animation: animateCheck 150ms ease-in 800ms both
+}
+
+.animateCheckMark9 {
+    animation: animateCheck 150ms ease-in 900ms both
+}
 
 @keyframes fromRight {
-    0% { transform: translateX(75%); opacity: 0%;}
-    100% { transform: translateX(0%); opacity: 100%; }
+    0% {
+        transform: translateX(50px);
+        opacity: 0%;
+    }
+
+    100% {
+        transform: translateX(0%);
+        opacity: 100%;
+    }
 }
+
 @keyframes animateCheck {
-    0% {stroke-dashoffset: 20.5}
-    100% {stroke-dashoffset: 0}
+    0% {
+        stroke-dashoffset: 20.5
+    }
+
+    100% {
+        stroke-dashoffset: 0
+    }
 }
+
 @media (min-width:768px) {
     .headingContainer {
         padding: 4rem 3rem;
         margin-bottom: 4rem;
     }
+
     .skillList {
         padding: 1rem 3rem;
     }
+
     .skillList ul {
-        justify-content:flex-start;
+        justify-content: flex-start;
     }
 }
