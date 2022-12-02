@@ -30,6 +30,10 @@
     order: 2;
 }
 
+.workDetails h2 {
+    color: white;
+}
+
 .workDetails h3 {
     color: darkolivegreen;
     font-weight: 400;
