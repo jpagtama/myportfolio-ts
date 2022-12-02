@@ -1,29 +1,29 @@
-import React, { useEffect, useState } from 'react';
-import { navActions } from '../store/navSlice';
-import { useDispatch } from 'react-redux';
-import LinkedInSVG from './LinkedInSVG';
-import GitHubSVG from './GitHubSVG';
-import { useInView } from 'react-intersection-observer';
-import styles from '../styles/About.module.css';
+import React, { useEffect, useState } from 'react'
+import { navActions } from '../store/navSlice'
+import { useDispatch } from 'react-redux'
+import LinkedInSVG from './LinkedInSVG'
+import GitHubSVG from './GitHubSVG'
+import { useInView } from 'react-intersection-observer'
+import styles from '../styles/About.module.css'
 
 
 const About = () => {
-    const dispatch = useDispatch();
+    const dispatch = useDispatch()
     const { ref: aboutRef, inView: aboutInView } = useInView({
         threshold: 0,
-    });
+    })
     const { ref: summaryRef, inView: summaryInView } = useInView({
         threshold: 0,
         triggerOnce: true
-    });
+    })
     const { ref: linkedInRef, inView: linkedInView } = useInView({
         threshold: 0,
         triggerOnce: true
-    });
+    })
     const { ref: gitHubRef, inView: gitHubInView } = useInView({
         threshold: 0,
         triggerOnce: true
-    });
+    })
 
     const [alreadyViewed, setAlreadyViewed] = useState(false)
 
@@ -31,7 +31,7 @@ const About = () => {
         if (aboutInView) {
             dispatch(navActions.activate('about'))
         }
-    }, [aboutInView, dispatch]);
+    }, [aboutInView, dispatch])
 
     useEffect(() => {
         if (aboutInView && !alreadyViewed) {
