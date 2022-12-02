@@ -36,7 +36,7 @@ const Projects = () => {
                     </div>
                     <p className={styles.projDesc}>Flekin is an npm package that allows developers to automatically extract the number of words, syllables, and sentences. Returns a readability score as processed by the Flesch-Kincaid formula.</p>
                     <div className={styles.projLinks}>
-                        <a href="/flekin" target="_blank" rel="noopener noreferrer" >Go to project</a>
+                        <a href="https://flekin-7qyrt.ondigitalocean.app/" target="_blank" rel="noopener noreferrer" >Go to project</a>
                         <a href="https://github.com/jpagtama/flekin" target="_blank" rel="noopener noreferrer" >View the code</a>
                     </div>
                 </div>
