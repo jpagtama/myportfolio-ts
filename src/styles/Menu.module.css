@@ -3,6 +3,7 @@
     flex-direction: column;
     justify-content: flex-start;
 }
+
 .list {
     list-style: none;
     padding: 0;
@@ -10,8 +11,10 @@
     text-align: right;
     margin-right: 2rem;
 }
+
 .list li {
     padding: 0.8rem;
+    color: white;
 }
 
 @media (min-width: 768px) {
@@ -19,6 +22,7 @@
         display: block;
         margin-right: 0;
     }
+
     .list li {
         padding: 1rem;
     }

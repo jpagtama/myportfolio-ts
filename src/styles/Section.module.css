@@ -24,7 +24,7 @@ h1 {
 
 p {
   font-size: 1.5rem;
-  color: gray;
+  color: lightgray;
 }
 
 @media (min-width: 768px) {
