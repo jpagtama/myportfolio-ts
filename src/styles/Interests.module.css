@@ -1,12 +1,12 @@
 .headingContainer {
-    background-color: darkslategray;
+    background-color: darkolivegreen;
     padding: 2rem 1rem;
     margin-bottom: 4rem;
     overflow: hidden;
 }
 
 .headingContainer h1 {
-    color: ivory;
+    color: black;
     margin: 0;
     opacity: 0%;
 }

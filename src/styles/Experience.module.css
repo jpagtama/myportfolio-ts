@@ -3,7 +3,7 @@
 }
 
 .headingContainer {
-    background-color: darkslategray;
+    background-color: darkolivegreen;
     padding: 2rem 1rem;
     display: flex;
     flex-direction: column;
@@ -12,7 +12,7 @@
 }
 
 .headingContainer h1 {
-    color: ivory;
+    color: black;
     margin: 0;
     opacity: 0%;
 }

@@ -1,5 +1,5 @@
 .headingContainer {
-    background-color: darkslategray;
+    background-color: darkolivegreen;
     padding: 2rem 1rem;
     display: flex;
     flex-direction: column;
@@ -8,7 +8,7 @@
 }
 
 .headingContainer h1 {
-    color: ivory;
+    color: black;
     margin: 0;
     opacity: 0%;
 }
@@ -101,7 +101,6 @@
 
 @media (min-width:768px) {
     .headingContainer {
-        background-color: darkslategray;
         padding: 4rem 3rem;
         margin-bottom: 4rem;
     }
