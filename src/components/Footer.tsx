@@ -1,4 +1,5 @@
 import { FaReact, FaNode, FaJs } from 'react-icons/fa'
+import { SiTypescript } from 'react-icons/si';
 import { IconContext } from 'react-icons/lib'
 import styles from '../styles/Footer.module.css'
 
@@ -8,10 +9,11 @@ const Footer = () => {
     return (
         <div className={styles.footerContainer}>
             <IconContext.Provider value={{ color: "gainsboro", size: "2rem" }}>
-                <div style={{ display: "flex", gap: "0.5rem", marginBottom: "1.5rem" }}>
+                <div style={{ display: "flex", gap: "1.5rem", marginBottom: "1.5rem" }}>
+                    <FaNode />
+                    <SiTypescript />
                     <FaReact />
                     <FaJs />
-                    <FaNode />
                 </div>
             </IconContext.Provider>
             <p className={styles.sideNote}>Contact me at jpagtama@gmail.com</p>
