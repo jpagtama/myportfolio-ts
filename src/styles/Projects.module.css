@@ -13,7 +13,15 @@
     opacity: 0%;
 }
 
+.allProjectsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+    margin-bottom: 10em;
+}
+
 .projTitle {
+    text-align: center;
     color: white;
     font-size: 2rem;
     font-weight: 400;
@@ -107,5 +115,9 @@
 
     .demoGif {
         margin-top: 0;
+    }
+
+    .allProjectsContainer {
+        gap: 5em;
     }
 }
