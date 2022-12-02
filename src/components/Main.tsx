@@ -14,7 +14,7 @@ const Main = () => {
     useEffect(() => {
         if (window.location.hash.length) {
             let sectionRef = document.getElementById(window.location.hash.replace(/#/g, ''))
-            if (sectionRef) sectionRef.scrollIntoView()
+            if (sectionRef) sectionRef.scrollIntoView({ behavior: "smooth" })
         }
     }, [])
 
