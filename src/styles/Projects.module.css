@@ -53,6 +53,7 @@
     width: 350px;
     height: auto;
     border-radius: 8px;
+    border: 1px solid darkolivegreen;
 }
 
 .projTech {

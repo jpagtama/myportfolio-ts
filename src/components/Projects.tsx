@@ -4,6 +4,7 @@ import { useInView } from 'react-intersection-observer'
 import { navActions } from '../store/navSlice'
 import flekinGif from '../assets/flekin_med.gif'
 import calendarGif from '../assets/calendar.gif'
+import finflexiGif from '../assets/finflexi.gif'
 import styles from '../styles/Projects.module.css'
 
 const Projects = () => {
@@ -29,6 +30,20 @@ const Projects = () => {
                 <h1 ref={ref} className={alreadyViewed ? styles.slideIn : ''}>Projects</h1>
             </div>
             <div className={styles.allProjectsContainer}>
+                <div className={styles.projContainer}>
+                    <img className={styles.demoGif} src={finflexiGif} alt="finflexi demo" />
+                    <div className={styles.projTextContainer}>
+                        <h4 className={styles.projTitle}>Finflexi</h4>
+                        <div className={styles.projTech}>
+                            <span>React | TypeScript | Next.js</span>
+                        </div>
+                        <p className={styles.projDesc}>Finflexi is a fintech app that allows you to view market and company data.</p>
+                        <div className={styles.projLinks}>
+                            <a href="https://finflexi.vercel.app" target="_blank" rel="noopener noreferrer" >Go to project</a>
+                            <a href="https://github.com/jpagtama/finflexi" target="_blank" rel="noopener noreferrer" >View the code</a>
+                        </div>
+                    </div>
+                </div>
                 <div className={styles.projContainer}>
                     <img className={styles.demoGif} src={calendarGif} alt="calendar demo" />
                     <div className={styles.projTextContainer}>
