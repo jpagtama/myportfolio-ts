@@ -11,11 +11,11 @@ import Footer from './Footer'
 import styles from '../styles/Main.module.css'
 
 interface Selector {
-    nav: { active: string }
+    nav: { scrollTo: string }
 }
 
 const Main = () => {
-    const activeLink = useSelector((state: Selector) => state.nav.active)
+    const scrollTo = useSelector((state: Selector) => state.nav.scrollTo)
 
     useEffect(() => {
         if (window.location.hash.length) {
@@ -25,9 +25,9 @@ const Main = () => {
     }, [])
 
     useEffect(() => {
-        const element = document.getElementById(activeLink)
+        const element = document.getElementById(scrollTo)
         element?.scrollIntoView({ behavior: "smooth" })
-    }, [activeLink])
+    }, [scrollTo])
 
     return (
         <div className={styles.main} >
