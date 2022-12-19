@@ -16,6 +16,9 @@ const navSlice = createSlice({
         toggleMenu(state) {
             state.showMenu = !state.showMenu
         },
+        openMenu(state, action) {
+            state.showMenu = action.payload
+        },
         scrollTo(state, action) {
             state.scrollTo = action.payload
         }

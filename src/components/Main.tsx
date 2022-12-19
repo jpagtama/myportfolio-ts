@@ -1,4 +1,5 @@
 import { useEffect } from 'react'
+import { useSelector } from 'react-redux'
 import About from './About'
 import Experience from './Experience'
 import Section from './Section'
@@ -9,7 +10,12 @@ import Interests from './Interests'
 import Footer from './Footer'
 import styles from '../styles/Main.module.css'
 
+interface Selector {
+    nav: { active: string }
+}
+
 const Main = () => {
+    const activeLink = useSelector((state: Selector) => state.nav.active)
 
     useEffect(() => {
         if (window.location.hash.length) {
@@ -17,6 +23,11 @@ const Main = () => {
             if (sectionRef) sectionRef.scrollIntoView({ behavior: "smooth" })
         }
     }, [])
+
+    useEffect(() => {
+        const element = document.getElementById(activeLink)
+        element?.scrollIntoView({ behavior: "smooth" })
+    }, [activeLink])
 
     return (
         <div className={styles.main} >
