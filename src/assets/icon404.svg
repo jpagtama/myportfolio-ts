@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 500 500" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <circle cx="250" cy="250" r="250" style="fill:rgb(85,107,47);"/>
+    <g transform="matrix(2.72324,0,0,2.72324,-320.332,-536.703)">
+        <text x="151.878px" y="317.339px" style="font-family:'ArialUnicodeMS', 'Arial Unicode MS', sans-serif;font-size:12px;">Sorry, page not found</text>
+    </g>
+    <g transform="matrix(13.4989,0,0,13.4989,-1831.42,-2375.26)">
+        <text x="142.69px" y="197.23px" style="font-family:'Silom';font-size:12px;">404</text>
+    </g>
+</svg>
