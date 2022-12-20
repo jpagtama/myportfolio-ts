@@ -30,9 +30,9 @@ const App = () => {
       <Provider store={store} >
         <Routes>
           <Route path="/" element={welcome} ></Route>
-          <Route path="/finflexi" element={< RedirectFinflexi />} />
-          <Route path="/flekin" element={< RedirectFlekin />} />
-          <Route path="/react-event-viewer-calendar" element={< RedirectCalendar />} />
+          <Route path="/finflexi" element={< RedirectFinflexi />} ></Route>
+          <Route path="/flekin" element={< RedirectFlekin />} ></Route>
+          <Route path="/react-event-viewer-calendar" element={< RedirectCalendar />} ></Route>
           <Route path="/*" element={<NotFound />} ></Route>
         </Routes>
       </Provider>
