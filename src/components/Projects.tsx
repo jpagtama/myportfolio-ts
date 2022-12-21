@@ -35,7 +35,7 @@ const Projects = () => {
                     <div className={styles.projTextContainer}>
                         <h4 className={styles.projTitle}>Finflexi</h4>
                         <div className={styles.projTech}>
-                            <span>React | TypeScript | Next.js</span>
+                            <span>React | TypeScript | Next.js | PostgreSQL</span>
                         </div>
                         <p className={styles.projDesc}>Finflexi is a fintech app that allows you to view market and company data.</p>
                         <div className={styles.projLinks}>
