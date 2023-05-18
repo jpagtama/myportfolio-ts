@@ -98,6 +98,30 @@
     animation: animateCheck 150ms ease-in 900ms both
 }
 
+.animateCheckMark10 {
+    animation: animateCheck 150ms ease-in 1000ms both
+}
+
+.animateCheckMark11 {
+    animation: animateCheck 150ms ease-in 1100ms both
+}
+
+.animateCheckMark12 {
+    animation: animateCheck 150ms ease-in 1200ms both
+}
+
+.animateCheckMark13 {
+    animation: animateCheck 150ms ease-in 1300ms both
+}
+
+.animateCheckMark14 {
+    animation: animateCheck 150ms ease-in 1400ms both
+}
+
+.animateCheckMark15 {
+    animation: animateCheck 150ms ease-in 1500ms both
+}
+
 @keyframes fromRight {
     0% {
         transform: translateX(50px);

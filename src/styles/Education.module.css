@@ -18,23 +18,28 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: stretch;
+    /* align-items: stretch; */
     padding: 0 1rem;
 }
 
 .collegeInfo {
     order: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .collegeInfo h2 {
-    color: darkslategray;
+    color: white;
     font-weight: 350;
+    margin-bottom: 1rem;
 }
 
-.collegeInfo h3 {
-    font-family: 'Playfair Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-    font-size: 1.3rem;
-    text-transform: none;
+.degreeInfo {
+    color: darkolivegreen;
+    font-size: 1.0rem;
+    font-style: italic;
+    font-weight: 300;
 }
 
 .attendanceDates {
@@ -78,6 +83,10 @@
 
     .collegeInfo {
         order: 1;
+    }
+
+    .degreeInfo {
+        font-size: 1.3rem;
     }
 
     .attendanceDates {

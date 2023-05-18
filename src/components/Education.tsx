@@ -28,7 +28,7 @@ const Education = () => {
             <div className={`${styles.educationInfo}`} >
                 <span className={styles.collegeInfo}>
                     <h2>California State University, Long Beach</h2>
-                    <h3>Bachelor's of Science, Computer Science</h3>
+                    <h3 className={styles.degreeInfo}>Bachelor of Science, Computer Science</h3>
                 </span>
                 <p className={styles.attendanceDates}>December 2013</p>
             </div>
