@@ -40,18 +40,19 @@ const Skills = () => {
                     <li><CheckMark className={`${styles.checkMarkInit} ${codeInView ? styles.animateCheckMark1 : ''}`} /><span>ReactJS</span></li>
                     <li><CheckMark className={`${styles.checkMarkInit} ${codeInView ? styles.animateCheckMark2 : ''}`} /><span>JavaScript</span></li>
                     <li><CheckMark className={`${styles.checkMarkInit} ${codeInView ? styles.animateCheckMark3 : ''}`} /><span>TypeScript</span></li>
-                    <li><CheckMark className={`${styles.checkMarkInit} ${codeInView ? styles.animateCheckMark4 : ''}`} /><span>ColdFusion</span></li>
                 </ul>
                 <h3>Tools & Technologies</h3>
                 <ul ref={toolsRef} className={styles.list} >
                     <li><CheckMark className={`${styles.checkMarkInit} ${toolsInView ? styles.animateCheckMark1 : ''}`} /><span>Node.js</span></li>
                     <li><CheckMark className={`${styles.checkMarkInit} ${toolsInView ? styles.animateCheckMark2 : ''}`} /><span>Next.js</span></li>
-                    <li><CheckMark className={`${styles.checkMarkInit} ${toolsInView ? styles.animateCheckMark3 : ''}`} /><span>PostgreSQL</span></li>
-                    <li><CheckMark className={`${styles.checkMarkInit} ${toolsInView ? styles.animateCheckMark4 : ''}`} /><span>GitHub</span></li>
-                    <li><CheckMark className={`${styles.checkMarkInit} ${toolsInView ? styles.animateCheckMark5 : ''}`} /><span>Jest</span></li>
-                    <li><CheckMark className={`${styles.checkMarkInit} ${toolsInView ? styles.animateCheckMark6 : ''}`} /><span>Vite</span></li>
-                    <li><CheckMark className={`${styles.checkMarkInit} ${toolsInView ? styles.animateCheckMark7 : ''}`} /><span>MacOS</span></li>
-                    <li><CheckMark className={`${styles.checkMarkInit} ${toolsInView ? styles.animateCheckMark8 : ''}`} /><span>Windows</span></li>
+                    <li><CheckMark className={`${styles.checkMarkInit} ${toolsInView ? styles.animateCheckMark3 : ''}`} /><span>Prisma</span></li>
+                    <li><CheckMark className={`${styles.checkMarkInit} ${toolsInView ? styles.animateCheckMark4 : ''}`} /><span>PostgreSQL</span></li>
+                    <li><CheckMark className={`${styles.checkMarkInit} ${toolsInView ? styles.animateCheckMark5 : ''}`} /><span>Git</span></li>
+                    <li><CheckMark className={`${styles.checkMarkInit} ${toolsInView ? styles.animateCheckMark6 : ''}`} /><span>Jest</span></li>
+                    <li><CheckMark className={`${styles.checkMarkInit} ${toolsInView ? styles.animateCheckMark7 : ''}`} /><span>Vite</span></li>
+                    <li><CheckMark className={`${styles.checkMarkInit} ${toolsInView ? styles.animateCheckMark8 : ''}`} /><span>VS Code</span></li>
+                    <li><CheckMark className={`${styles.checkMarkInit} ${toolsInView ? styles.animateCheckMark9 : ''}`} /><span>MacOS</span></li>
+                    <li><CheckMark className={`${styles.checkMarkInit} ${toolsInView ? styles.animateCheckMark9 : ''}`} /><span>Windows</span></li>
                     <li><CheckMark className={`${styles.checkMarkInit} ${toolsInView ? styles.animateCheckMark9 : ''}`} /><span>JIRA</span></li>
                 </ul>
             </div>

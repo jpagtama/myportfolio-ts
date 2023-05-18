@@ -30,7 +30,7 @@ const Education = () => {
                     <h2>California State University, Long Beach</h2>
                     <h3>Bachelor's of Science, Computer Science</h3>
                 </span>
-                <p className={styles.attendanceDates}>August 2006 - December 2013</p>
+                <p className={styles.attendanceDates}>December 2013</p>
             </div>
 
         </React.Fragment>

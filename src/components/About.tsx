@@ -46,7 +46,7 @@ const About = () => {
             </div>
             <div className={styles.summaryContainer}>
                 <p ref={summaryRef} className={`${styles.summary} ${summaryInView ? styles.animateSummary : ''}`}>
-                    I have more than 6 years of software development experience in high volume applications where I aim to ensure scalability, optimize performance, and utilize best security practices.
+                    A results-driven Software Developer with more than 6 years of experience and expertise in React, JavaScript, TypeScript, Node.js, and more. Skilled in developing intuitive and responsive web applications to enhance user experience and drive business growth. Proven track record of delivering high-quality projects within strict timelines and collaborating effectively with a range of diverse teams.
                 </p>
                 <div className={styles.links} >
                     <a ref={linkedInRef} className={`${linkedInView && styles.animateLinkedIn}`} href="https://www.linkedin.com/in/jpagtama/" target="_blank" rel="noreferrer" >

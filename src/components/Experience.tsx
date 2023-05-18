@@ -40,7 +40,7 @@ const Experience = () => {
                     <h2>Software Developer</h2>
                     <h3>Regal Medical Group</h3>
                     <p className={styles.workDesc} >
-                        Developed and maintained applications within the health industry. Users consists of customers, nurses, doctors, and employees within their network.
+                        Developed and maintained applications for one of the largest physician-led healthcare networks in Southern California. Applications used among thousands of doctors and patients across hospitals and urgent care centers.
                     </p>
                 </span>
                 <p className={styles.workDates} >January 2018 - March 2021</p>
@@ -48,9 +48,9 @@ const Experience = () => {
             <div ref={secondSummaryRef} className={`${styles.container} ${secondSummaryInView ? styles.secondSummary : ''}`}>
                 <span className={styles.workDetails}>
                     <h2>Web Developer</h2>
-                    <h3>Breakdown Services</h3>
+                    <h3>Nonfat Media (Breakdown Services)</h3>
                     <p className={styles.workDesc} >
-                        Worked within a team to maintain and engineer a system of applications designed to service casting directors, talent representatives, and actors within a seamless, casting ecosystem.
+                        Worked within a team to maintain and engineer a system of applications recognized by the Casting Society of America as the primary distributor of casting breakdowns. Applications used to service casting directors, talent representatives, and actors within a seamless, casting ecosystem.
                     </p>
                 </span>
 
