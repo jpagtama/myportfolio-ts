@@ -66,18 +66,18 @@ const Skills = () => {
                     <li><CheckMark className={`${styles.checkMarkInit} ${toolsInView ? styles.animateCheckMark2 : ''}`} /><span>Node.js</span></li>
                     <li><CheckMark className={`${styles.checkMarkInit} ${toolsInView ? styles.animateCheckMark3 : ''}`} /><span>Next.js</span></li>
                     <li><CheckMark className={`${styles.checkMarkInit} ${toolsInView ? styles.animateCheckMark4 : ''}`} /><span>React Dev Tools</span></li>
-                    <li><CheckMark className={`${styles.checkMarkInit} ${toolsInView ? styles.animateCheckMark5 : ''}`} /><span>Redux Toolkit</span></li>
-                    <li><CheckMark className={`${styles.checkMarkInit} ${toolsInView ? styles.animateCheckMark6 : ''}`} /><span>Git</span></li>
-                    <li><CheckMark className={`${styles.checkMarkInit} ${toolsInView ? styles.animateCheckMark7 : ''}`} /><span>Redux DevTools</span></li>
-                    <li><CheckMark className={`${styles.checkMarkInit} ${toolsInView ? styles.animateCheckMark8 : ''}`} /><span>Prisma</span></li>
+                    <li><CheckMark className={`${styles.checkMarkInit} ${toolsInView ? styles.animateCheckMark5 : ''}`} /><span>Git</span></li>
+                    <li><CheckMark className={`${styles.checkMarkInit} ${toolsInView ? styles.animateCheckMark6 : ''}`} /><span>Redux DevTools</span></li>
+                    <li><CheckMark className={`${styles.checkMarkInit} ${toolsInView ? styles.animateCheckMark7 : ''}`} /><span>Prisma</span></li>
                 </ul>
                 <h3>Libraries</h3>
                 <ul ref={libRef} className={styles.list} >
-                    <li><CheckMark className={`${styles.checkMarkInit} ${libInView ? styles.animateCheckMark1 : ''}`} /><span>Axios</span></li>
-                    <li><CheckMark className={`${styles.checkMarkInit} ${libInView ? styles.animateCheckMark2 : ''}`} /><span>NextAuth.js</span></li>
-                    <li><CheckMark className={`${styles.checkMarkInit} ${libInView ? styles.animateCheckMark3 : ''}`} /><span>Chart.js</span></li>
-                    <li><CheckMark className={`${styles.checkMarkInit} ${libInView ? styles.animateCheckMark4 : ''}`} /><span>Nodemailer</span></li>
-                    <li><CheckMark className={`${styles.checkMarkInit} ${libInView ? styles.animateCheckMark5 : ''}`} /><span>jQuery</span></li>
+                    <li><CheckMark className={`${styles.checkMarkInit} ${libInView ? styles.animateCheckMark1 : ''}`} /><span>Redux Toolkit</span></li>
+                    <li><CheckMark className={`${styles.checkMarkInit} ${libInView ? styles.animateCheckMark2 : ''}`} /><span>Axios</span></li>
+                    <li><CheckMark className={`${styles.checkMarkInit} ${libInView ? styles.animateCheckMark3 : ''}`} /><span>NextAuth.js</span></li>
+                    <li><CheckMark className={`${styles.checkMarkInit} ${libInView ? styles.animateCheckMark4 : ''}`} /><span>Chart.js</span></li>
+                    <li><CheckMark className={`${styles.checkMarkInit} ${libInView ? styles.animateCheckMark5 : ''}`} /><span>Nodemailer</span></li>
+                    <li><CheckMark className={`${styles.checkMarkInit} ${libInView ? styles.animateCheckMark6 : ''}`} /><span>jQuery</span></li>
                 </ul>
                 <h3>Software</h3>
                 <ul ref={softwareRef} className={styles.list} >
