@@ -8,9 +8,9 @@ import './App.css'
 
 const App = () => {
 
-  const welcome = (<>
+  const welcome = (<div className='min-h-screen'>
     <SideNav /><Main />
-  </>)
+  </div>)
 
   const RedirectCalendar = () => {
     window.location.replace('https://react-event-viewer-calendar-r34x4.ondigitalocean.app/')
