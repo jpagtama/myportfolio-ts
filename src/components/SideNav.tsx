@@ -1,7 +1,5 @@
 import Menu from './Menu'
 import { useSelector } from 'react-redux'
-import ProfilePic from './ProfilePic'
-import styles from '../styles/SideNav.module.css'
 
 interface Selector {
     nav: { showMenu: boolean }
@@ -10,8 +8,7 @@ interface Selector {
 const SideNav = () => {
     const { showMenu } = useSelector((state: Selector) => state.nav)
     return (
-        <nav className={`${styles.nav} ${showMenu ? styles.openMenu : styles.closeMenu}`} >
-            <ProfilePic />
+        <nav className="flex justify-center fixed top-0 w-full bg-none" >
             <Menu />
         </nav>
     )
