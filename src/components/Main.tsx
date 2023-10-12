@@ -30,7 +30,7 @@ const Main = () => {
     }, [scrollTo])
 
     return (
-        <div className={styles.main} >
+        <div className="w-full h-min-screen" >
             <Section ><About /></Section>
             <Section ><Experience /></Section>
             <Section ><Projects /></Section>
