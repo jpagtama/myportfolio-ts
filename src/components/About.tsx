@@ -7,6 +7,7 @@ import { useInView } from 'react-intersection-observer';
 import lightBublIcon from '../assets/lightbulb_icon.svg';
 import securityIcon from '../assets/security_icon.svg';
 import dumbBellIcon from '../assets/dumbbell_icon.svg';
+import { motion } from 'framer-motion';
 
 const About = () => {
     const dispatch = useDispatch()
@@ -44,25 +45,62 @@ const About = () => {
         <React.Fragment>
             <div id='About' className='h-screen w-full flex flex-col justify-center items-center flex-wrap gap-8'>
                 <div className='flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-8' >
-                    <div className='flex flex-col justify-center items-center sm:items-end gap-0 sm:gap-2' >
+                    <motion.div className='flex flex-col justify-center items-center sm:items-end gap-0 sm:gap-2'
+                        initial={{ opacity: 0, y: 100 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ type: 'spring', duration: 0.75 }}
+                        viewport={{ once: true }}
+
+                    >
                         <h1 ref={aboutRef} className='text-8xl md:text-9xl text-indigo-300' >Julian</h1>
                         <h1 className='text-5xl sm:text-8xl md:text-9xl text-indigo-300' >Pagtama</h1>
-                    </div>
+                    </motion.div>
                     <ul className='flex flex-row sm:flex-col justify-start gap-2 md:gap-8 sm:gap-4 text-xs sm:text-lg md:text-3xl' >
-                        <li>Software Developer</li>
-                        <span className='visible sm:hidden' >&bull;</span>
-                        <li>Los Angeles, CA</li>
-                        <span className='visible sm:hidden' >&bull;</span>
-                        <li>jpagtama@gmail.com</li>
+                        <motion.li
+                            initial={{ opacity: 0, y: 100 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ type: 'spring', duration: 0.75, delay: 0.3 }}
+                            viewport={{ once: true }}
+                        >
+                            Software Developer
+                        </motion.li>
+                        {/* <span className='visible sm:hidden' >&bull;</span> */}
+                        <motion.li
+                            initial={{ opacity: 0, y: 100 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ type: 'spring', duration: 0.75, delay: 0.4 }}
+                            viewport={{ once: true }}
+                        >
+                            Los Angeles, CA
+                        </motion.li>
+                        {/* <span className='visible sm:hidden' >&bull;</span> */}
+                        <motion.li
+                            initial={{ opacity: 0, y: 100 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ type: 'spring', duration: 0.75, delay: 0.5 }}
+                            viewport={{ once: true }}
+                        >
+                            jpagtama@gmail.com
+                        </motion.li>
                     </ul>
                 </div>
                 <div className='w-full flex justify-center gap-4'>
-                    <a ref={linkedInRef} className='hover:scale-110 duration-150 text-6xl sm:text-7xl' href='https://www.linkedin.com/in/jpagtama/' target='_blank' rel='noreferrer' >
+                    <motion.a ref={linkedInRef} className='hover:scale-110 duration-150 text-6xl sm:text-7xl' href='https://www.linkedin.com/in/jpagtama/' target='_blank' rel='noreferrer'
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        transition={{ duration: 0.75, delay: 0.6 }}
+                        viewport={{ once: true }}
+                    >
                         <IconContext.Provider value={{ color: 'darkolivegreen' }}><FaLinkedin /></IconContext.Provider>
-                    </a>
-                    <a ref={gitHubRef} className='hover:scale-110 duration-150 text-6xl sm:text-7xl' href='https://github.com/jpagtama' target='_blank' rel='noreferrer'>
+                    </motion.a>
+                    <motion.a ref={gitHubRef} className='hover:scale-110 duration-150 text-6xl sm:text-7xl' href='https://github.com/jpagtama' target='_blank' rel='noreferrer'
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        transition={{ duration: 0.75, delay: 0.7 }}
+                        viewport={{ once: true }}
+                    >
                         <IconContext.Provider value={{ color: 'darkolivegreen' }}><FaGithub /></IconContext.Provider>
-                    </a>
+                    </motion.a>
                 </div>
             </div>
             <div ref={summaryRef} className='flex flex-col sm:flex-row flex-wrap justify-center items-center gap-16 sm:gap-48 w-full min-h-screen p-4' >
