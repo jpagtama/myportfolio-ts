@@ -17,12 +17,12 @@ function Menu() {
     })
 
     return (
-        <div className={styles.menuContainer}>
+        <>
             <MenuButton />
-            <ul className={styles.list}>
+            <ul className='flex mt-8 rounded-full px-10 bg-transparent backdrop-blur-sm'>
                 {menuSections}
             </ul>
-        </div>
+        </>
     )
 }
 
