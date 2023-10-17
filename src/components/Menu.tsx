@@ -7,14 +7,16 @@ interface Selector {
     nav: { active: string }
 }
 
-const menuItems = ['About', 'Experience', 'Projects', 'Skills', 'Education', 'Interests']
+interface Props {
+    menuItems: string[]
+}
 
-function Menu() {
+function Menu({ menuItems }: Props) {
     const activeLabel = useSelector((state: Selector) => state.nav.active)
     const menuSections = menuItems.map((item, i) => {
         const isActive = item.toLowerCase() === activeLabel.toLowerCase()
         return <MenuItem key={i} title={item} isActive={isActive} />
-    })
+    });
 
     return <nav className='hidden sm:block'>
         <ul className='flex sm:flex-row sm:mt-8 rounded-full px-10 sm:bg-transparent sm:backdrop-blur-sm'>
