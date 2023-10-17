@@ -16,8 +16,8 @@ const MenuItem = (props: Props) => {
     }
 
     return (
-        <li className={`${styles.listItem} ${props.isActive && styles.active}`} onClick={clickHandler}>
-            <span>{props.title}</span>
+        <li className={`${styles.listItem}`} onClick={clickHandler}>
+            <span className='sm:text-3xl'>{props.title}</span>
         </li>
     )
 }
