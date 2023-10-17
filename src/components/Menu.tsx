@@ -19,7 +19,7 @@ function Menu({ menuItems }: Props) {
     });
 
     return <nav className='hidden sm:block'>
-        <ul className='flex sm:flex-row sm:mt-8 rounded-full px-10 sm:bg-transparent sm:backdrop-blur-sm'>
+        <ul className='flex sm:flex-row sm:gap-4 md:gap-6 sm:mt-8 rounded-full px-10 sm:bg-transparent sm:backdrop-blur-sm'>
             {menuSections}
         </ul>
     </nav>
