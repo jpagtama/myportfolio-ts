@@ -16,14 +16,12 @@ function Menu() {
         return <MenuItem key={i} title={item} isActive={isActive} />
     })
 
-    return (
-        <>
-            <MenuButton />
-            <ul className='flex mt-8 rounded-full px-10 bg-transparent backdrop-blur-sm'>
-                {menuSections}
-            </ul>
-        </>
-    )
+    return <nav className='hidden sm:block'>
+        <ul className='flex sm:flex-row sm:mt-8 rounded-full px-10 sm:bg-transparent sm:backdrop-blur-sm'>
+            {menuSections}
+        </ul>
+    </nav>
+
 }
 
 export default Menu
