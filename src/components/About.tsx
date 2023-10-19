@@ -105,27 +105,27 @@ const About = () => {
             </div>
             <div ref={summaryRef} className='flex flex-col sm:flex-row flex-wrap justify-center items-center gap-16 sm:gap-48 w-full min-h-screen p-4 mb-96 xs:mb-48' >
                 <motion.div className='sm:w-56 flex flex-col justify-center items-center gap-12'
-                    initial={{ opacity: 0, y: 100 }}
+                    initial={{ opacity: 0, y: 50 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ style: 'spring', duration: 0.7, delay: 0.3 }}
+                    transition={{ style: 'spring', duration: 0.7, delay: 0.25 }}
                     viewport={{ once: true }}
                 >
                     <img className='w-48 -order-1 sm:order-none' src={lightBublIcon} alt="experiences image" />
                     <p className='text-center sm:text-2xl' >Crafting user-centric experiences is my passion</p>
                 </motion.div>
                 <motion.div className='sm:w-56 flex flex-col justify-center items-center gap-12'
-                    initial={{ opacity: 0, y: 100 }}
+                    initial={{ opacity: 0, y: 50 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ style: 'spring', duration: 0.7, delay: 0.3 }}
+                    transition={{ style: 'spring', duration: 0.7, delay: 0.25 }}
                     viewport={{ once: true }}
                 >
                     <img className='w-48 -order-1 sm:order-none' src={securityIcon} alt="security image" />
                     <p className='text-center sm:text-2xl'>Security best practices are a must</p>
                 </motion.div>
                 <motion.div className='sm:w-56 flex flex-col justify-center items-center gap-12'
-                    initial={{ opacity: 0, y: 100 }}
+                    initial={{ opacity: 0, y: 50 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ style: 'spring', duration: 0.7, delay: 0.3 }}
+                    transition={{ style: 'spring', duration: 0.7, delay: 0.25 }}
                     viewport={{ once: true }}
                 >
                     <img className='w-48 -order-1 sm:order-none' src={dumbBellIcon} alt="performance image" />
