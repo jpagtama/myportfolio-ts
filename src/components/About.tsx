@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useMemo } from 'react';
 import { navActions } from '../store/navSlice';
 import { useDispatch } from 'react-redux';
 import { FaLinkedin, FaGithub } from 'react-icons/fa';
@@ -39,7 +39,29 @@ const About = () => {
         if (aboutInView && !alreadyViewed) {
             setAlreadyViewed(true)
         }
-    }, [aboutInView, alreadyViewed])
+    }, [aboutInView, alreadyViewed]);
+
+    const renderStars = useMemo(() => {
+        const randomPositions = [];
+        const smStarCount = 45;
+        const lgStarCount = 10;
+        const totalStarCount = smStarCount + lgStarCount;
+
+        for (let c = 0; c < totalStarCount; c++) {
+            const xPosition = Math.floor(Math.random() * 99) + 1;
+            const yPosition = Math.floor(Math.random() * 99) + 1;
+            randomPositions.push({ x: xPosition, y: yPosition });
+        }
+
+        return randomPositions.map((position, i) => {
+            if (i < smStarCount) {
+                return <div key={`star${i}`} className='bg-white rounded-full h-[1px] w-[1px] relative' style={{ left: `${position.x}%`, bottom: `${position.y}%` }} />
+            }
+            if (i < totalStarCount) {
+                return <div key={`star${i}`} className='bg-white rounded-full h-[3px] w-[3px] relative' style={{ left: `${position.x}%`, bottom: `${position.y}%` }} />
+            }
+        });
+    }, []);
 
     return (
         <React.Fragment>
@@ -50,10 +72,9 @@ const About = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ type: 'spring', duration: 0.75 }}
                         viewport={{ once: true }}
-
                     >
-                        <h1 ref={aboutRef} className='text-8xl md:text-9xl text-indigo-300' >Julian</h1>
-                        <h1 className='text-5xl sm:text-8xl md:text-9xl text-indigo-300' >Pagtama</h1>
+                        <h1 ref={aboutRef} className='text-8xl md:text-9xl text-indigo-300 bg-gradient-to-b from-slate-100 to-slate-900 text-transparent bg-clip-text' >Julian</h1>
+                        <h1 className='text-5xl sm:text-8xl md:text-9xl text-indigo-300 pb-4 bg-gradient-to-b from-slate-100 to-slate-900 text-transparent bg-clip-text' >Pagtama</h1>
                     </motion.div>
                     <ul className='flex flex-row sm:flex-col justify-start gap-2 md:gap-8 sm:gap-4 text-xs sm:text-lg md:text-3xl' >
                         <motion.li
@@ -101,6 +122,12 @@ const About = () => {
                     >
                         <IconContext.Provider value={{ color: 'darkolivegreen' }}><FaGithub /></IconContext.Provider>
                     </motion.a>
+                </div>
+                <div className='flex items-end absolute w-full h-full -z-10 overflow-x-hidden bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] from-[rgba(27,39,53,1)] to-black' >
+                    {/* <div className='w-full h-full '
+                        style={{ backgroundImage: `url(${starryBackground1})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}
+                    /> */}
+                    {renderStars}
                 </div>
             </div>
             <div ref={summaryRef} className='flex flex-col sm:flex-row flex-wrap justify-center items-center gap-16 sm:gap-48 w-full min-h-screen p-4 mb-96 xs:mb-48' >
