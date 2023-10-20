@@ -22,7 +22,7 @@ const SideNav = () => {
             {/* Use for mobile view */}
             <AnimatePresence>
                 {showMenu && (
-                    <motion.div className={`flex flex-col sm:hidden w-full h-screen py-8 px-4 bg-lime-900`}
+                    <motion.div className={`flex flex-col sm:hidden w-full h-screen py-8 px-4 bg-gradient-to-bl from-slate-700 to-lime-900`}
                         initial={{ y: '-100%' }}
                         animate={{ y: 0 }}
                         transition={{ duration: 0.3 }}
