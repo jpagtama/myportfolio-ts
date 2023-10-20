@@ -1,12 +1,10 @@
 import React, { useEffect, useState, useMemo } from 'react';
 import { navActions } from '../store/navSlice';
 import { useDispatch } from 'react-redux';
-import { FaLinkedin, FaGithub } from 'react-icons/fa';
+import { FaLinkedin, FaGithub, FaRegLightbulb, FaShieldAlt } from 'react-icons/fa';
+import { SiStarship } from 'react-icons/si';
 import { IconContext } from 'react-icons/lib';
 import { useInView } from 'react-intersection-observer';
-import lightBublIcon from '../assets/lightbulb_icon.svg';
-import securityIcon from '../assets/security_icon.svg';
-import dumbBellIcon from '../assets/dumbbell_icon.svg';
 import { motion } from 'framer-motion';
 
 const About = () => {
@@ -128,31 +126,38 @@ const About = () => {
                 </div>
             </div>
             <div ref={summaryRef} className='flex flex-col sm:flex-row flex-wrap justify-center items-center gap-16 sm:gap-48 w-full min-h-screen py-16 px-4' >
+
                 <motion.div className='sm:w-56 flex flex-col justify-center items-center gap-12'
-                    initial={{ opacity: 0, y: 50 }}
+                    initial={{ opacity: 0.15, y: 50 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ style: 'spring', duration: 0.7, delay: 0.25 }}
+                    transition={{ style: 'spring', duration: 0.3 }}
                     viewport={{ once: true }}
                 >
-                    <img className='w-48 -order-1 sm:order-none' src={lightBublIcon} alt="experiences image" />
+                    <div className='flex justify-center items-center h-52 w-52 relative hexagon bg-gradient-to-bl from-slate-700 to-lime-900'>
+                        <IconContext.Provider value={{ size: '7rem', color: '#121212' }}><FaRegLightbulb /></IconContext.Provider>
+                    </div>
                     <p className='text-center sm:text-2xl' >Crafting user-centric experiences is my passion</p>
                 </motion.div>
                 <motion.div className='sm:w-56 flex flex-col justify-center items-center gap-12'
-                    initial={{ opacity: 0, y: 50 }}
+                    initial={{ opacity: 0.15, y: 50 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ style: 'spring', duration: 0.7, delay: 0.25 }}
+                    transition={{ style: 'spring', duration: 0.3 }}
                     viewport={{ once: true }}
                 >
-                    <img className='w-48 -order-1 sm:order-none' src={securityIcon} alt="security image" />
+                    <div className='flex justify-center items-center h-52 w-52 relative hexagon bg-gradient-to-bl from-slate-700 to-lime-900'>
+                        <IconContext.Provider value={{ size: '7rem', color: '#121212' }}><FaShieldAlt /></IconContext.Provider>
+                    </div>
                     <p className='text-center sm:text-2xl'>Security best practices are a must</p>
                 </motion.div>
                 <motion.div className='sm:w-56 flex flex-col justify-center items-center gap-12'
-                    initial={{ opacity: 0, y: 50 }}
+                    initial={{ opacity: 0.15, y: 50 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ style: 'spring', duration: 0.7, delay: 0.25 }}
+                    transition={{ style: 'spring', duration: 0.3 }}
                     viewport={{ once: true }}
                 >
-                    <img className='w-48 -order-1 sm:order-none' src={dumbBellIcon} alt="performance image" />
+                    <div className='flex justify-center items-center h-52 w-52 relative hexagon bg-gradient-to-bl from-slate-700 to-lime-900'>
+                        <IconContext.Provider value={{ size: '7rem', color: '#121212' }}><SiStarship /></IconContext.Provider>
+                    </div>
                     <p className='text-center sm:text-2xl'>I aim for performant, scalable, and accessible solutions</p>
                 </motion.div>
             </div>
