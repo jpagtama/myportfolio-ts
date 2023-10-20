@@ -66,17 +66,17 @@ const About = () => {
     return (
         <React.Fragment>
             <div id='About' className='h-screen w-full flex flex-col justify-center items-center flex-wrap gap-8'>
-                <div className='flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-8' >
+                <div className='flex flex-col sm:flex-row flex-wrap justify-center items-center gap-4 min-w-[320px] sm:gap-8' >
                     <motion.div className='flex flex-col justify-center items-center sm:items-end gap-0 sm:gap-2'
                         initial={{ opacity: 0, y: 100 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ type: 'spring', duration: 0.75 }}
                         viewport={{ once: true }}
                     >
-                        <h1 ref={aboutRef} className='text-8xl md:text-9xl text-indigo-300 bg-gradient-to-b from-slate-100 to-slate-900 text-transparent bg-clip-text' >Julian</h1>
-                        <h1 className='text-5xl sm:text-8xl md:text-9xl text-indigo-300 pb-4 bg-gradient-to-b from-slate-100 to-slate-900 text-transparent bg-clip-text' >Pagtama</h1>
+                        <h1 ref={aboutRef} className='text-7xl md:text-9xl text-indigo-300 bg-gradient-to-b from-slate-100 to-slate-900 text-transparent bg-clip-text' >JULIAN</h1>
+                        <h1 className='text-4xl md:text-9xl text-indigo-300 bg-gradient-to-b from-slate-100 to-slate-900 text-transparent bg-clip-text' >PAGTAMA</h1>
                     </motion.div>
-                    <ul className='flex flex-row sm:flex-col justify-start gap-2 md:gap-8 sm:gap-4 text-xs sm:text-lg md:text-3xl' >
+                    <ul className='flex flex-row sm:flex-col justify-start gap-2 md:gap-8 sm:gap-4 flex-wrap text-xs sm:text-lg md:text-3xl' >
                         <motion.li
                             initial={{ opacity: 0, y: 100 }}
                             whileInView={{ opacity: 1, y: 0 }}
@@ -112,7 +112,7 @@ const About = () => {
                         transition={{ duration: 0.75, delay: 0.6 }}
                         viewport={{ once: true }}
                     >
-                        <IconContext.Provider value={{ color: 'darkolivegreen' }}><FaLinkedin /></IconContext.Provider>
+                        <IconContext.Provider value={{ color: 'rgb(54 83 20)' }}><FaLinkedin /></IconContext.Provider>
                     </motion.a>
                     <motion.a ref={gitHubRef} className='hover:scale-110 duration-150 text-6xl sm:text-7xl' href='https://github.com/jpagtama' target='_blank' rel='noreferrer'
                         initial={{ opacity: 0 }}
@@ -120,17 +120,14 @@ const About = () => {
                         transition={{ duration: 0.75, delay: 0.7 }}
                         viewport={{ once: true }}
                     >
-                        <IconContext.Provider value={{ color: 'darkolivegreen' }}><FaGithub /></IconContext.Provider>
+                        <IconContext.Provider value={{ color: 'rgb(54 83 20)' }}><FaGithub /></IconContext.Provider>
                     </motion.a>
                 </div>
-                <div className='flex items-end absolute w-full h-full -z-10 overflow-x-hidden bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] from-[rgba(27,39,53,1)] to-black' >
-                    {/* <div className='w-full h-full '
-                        style={{ backgroundImage: `url(${starryBackground1})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}
-                    /> */}
+                <div className='flex items-end absolute min-w-[320px] w-full h-full -z-10 overflow-x-hidden bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] from-[rgba(27,39,53,1)] to-black' >
                     {renderStars}
                 </div>
             </div>
-            <div ref={summaryRef} className='flex flex-col sm:flex-row flex-wrap justify-center items-center gap-16 sm:gap-48 w-full min-h-screen p-4 mb-96 xs:mb-48' >
+            <div ref={summaryRef} className='flex flex-col sm:flex-row flex-wrap justify-center items-center gap-16 sm:gap-48 w-full min-h-screen py-16 px-4' >
                 <motion.div className='sm:w-56 flex flex-col justify-center items-center gap-12'
                     initial={{ opacity: 0, y: 50 }}
                     whileInView={{ opacity: 1, y: 0 }}
