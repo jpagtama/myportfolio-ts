@@ -21,7 +21,7 @@ const MenuButton = () => {
     }
 
     return (
-        <button onClick={clickHandler} className='flex flex-col justify-center items-center self-end gap-1 rounded-full h-12 w-12 bg-lime-900 visible sm:hidden border-none fixed top-0 right-0 mt-4 mr-4 focus:outline-none z-20'>
+        <button onClick={clickHandler} className='flex flex-col justify-center items-center self-end gap-1 rounded-full h-12 w-12 bg-slate-700 visible sm:hidden border-none fixed top-0 right-0 mt-4 mr-4 focus:outline-none z-20'>
             <motion.span id='topLine' className='w-7 h-1 rounded-full bg-slate-200'
                 animate={showMenu ? 'animateTopToX' : 'animateToHamburger'}
                 variants={variants}
