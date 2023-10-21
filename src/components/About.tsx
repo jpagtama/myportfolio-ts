@@ -133,15 +133,15 @@ const About = () => {
                     </div>
                 </div>
             </div>
-            <div ref={summaryRef} className='flex flex-col sm:flex-row flex-wrap justify-center items-center gap-16 sm:gap-48 w-full min-h-screen py-16 px-4 bg-[#121212]' >
+            <div ref={summaryRef} className='flex flex-col sm:flex-row flex-wrap justify-center items-center gap-16 sm:gap-48 w-full min-h-screen py-16 px-4 bg-dark' >
                 <motion.div className='sm:w-56 flex flex-col justify-center items-center gap-12'
                     initial={{ opacity: 0.15, y: 50 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ style: 'spring', duration: 0.3 }}
                     viewport={{ once: true }}
                 >
-                    <div className='flex justify-center items-center h-52 w-52 relative hexagon bg-gradient-to-bl from-slate-700 to-lime-900'>
-                        <IconContext.Provider value={{ size: '7rem', color: '#121212' }}><FaRegLightbulb /></IconContext.Provider>
+                    <div className='flex justify-center items-center h-36 w-36 lg:h-52 lg:w-52 relative hexagon bg-gradient-to-bl from-slate-700 to-lime-900'>
+                        <IconContext.Provider value={{ size: '60%', color: '#121212' }}><FaRegLightbulb /></IconContext.Provider>
                     </div>
                     <p className='text-center sm:text-2xl' >Crafting user-centric experiences is my passion</p>
                 </motion.div>
@@ -151,8 +151,8 @@ const About = () => {
                     transition={{ style: 'spring', duration: 0.3 }}
                     viewport={{ once: true }}
                 >
-                    <div className='flex justify-center items-center h-52 w-52 relative hexagon bg-gradient-to-bl from-slate-700 to-lime-900'>
-                        <IconContext.Provider value={{ size: '7rem', color: '#121212' }}><SiStarship /></IconContext.Provider>
+                    <div className='flex justify-center items-center h-36 w-36 lg:h-52 lg:w-52 relative hexagon bg-gradient-to-bl from-slate-700 to-lime-900'>
+                        <IconContext.Provider value={{ size: '60%', color: '#121212' }}><SiStarship /></IconContext.Provider>
                     </div>
                     <p className='text-center sm:text-2xl'>I aim for performant, scalable, and accessible solutions</p>
                 </motion.div>
@@ -162,8 +162,8 @@ const About = () => {
                     transition={{ style: 'spring', duration: 0.3 }}
                     viewport={{ once: true }}
                 >
-                    <div className='flex justify-center items-center h-52 w-52 relative hexagon bg-gradient-to-bl from-slate-700 to-lime-900'>
-                        <IconContext.Provider value={{ size: '7rem', color: '#121212' }}><FaShieldAlt /></IconContext.Provider>
+                    <div className='flex justify-center items-center h-36 w-36 lg:h-52 lg:w-52 relative hexagon bg-gradient-to-bl from-slate-700 to-lime-900'>
+                        <IconContext.Provider value={{ size: '60%', color: '#121212' }}><FaShieldAlt /></IconContext.Provider>
                     </div>
                     <p className='text-center sm:text-2xl'>Security best practices are a must</p>
                 </motion.div>
