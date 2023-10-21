@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import MenuItem from './MenuItem'
 import { useSelector } from 'react-redux'
-import MenuButton from './MenuButton'
 import { motion, AnimatePresence, useMotionValueEvent, useScroll } from 'framer-motion'
 
 interface Selector {
@@ -14,11 +13,13 @@ interface Props {
 
 function Menu({ menuItems }: Props) {
     const [prevScrollVal, setPrevScrollVal] = useState(0);
+    const [isAtTop, setIsAtTop] = useState(true);
     const [showNav, setShowNav] = useState(true);
     const activeLabel = useSelector((state: Selector) => state.nav.active)
     const { scrollY } = useScroll();
 
     useMotionValueEvent(scrollY, "change", (latest) => {
+        setIsAtTop(latest === 0);
         if (latest > prevScrollVal) setShowNav(false);
         else if (latest < prevScrollVal) setShowNav(true);
         setPrevScrollVal(latest);
@@ -38,7 +39,7 @@ function Menu({ menuItems }: Props) {
                 transition={{ duration: 0.25 }}
                 exit={{ opacity: 0, y: -100 }}
             >
-                <ul className='flex sm:flex-row items-center sm:gap-4 md:gap-12 sm:mt-8 rounded-full px-10 sm:h-16 bg-slate-700 bg-opacity-50 hover:bg-opacity-100 duration-150 text-slate-100'>
+                <ul className={`flex sm:flex-row items-center sm:gap-4 md:gap-12 mt-4 lg:mt-8 rounded-full px-10 sm:h-16 bg-slate-700 ${isAtTop ? 'bg-opacity-0' : 'bg-opacity-90'} hover:bg-opacity-100 duration-150 text-slate-300`}>
                     {menuSections}
                 </ul>
             </motion.nav>
