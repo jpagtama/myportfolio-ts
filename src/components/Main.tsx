@@ -8,7 +8,6 @@ import Skills from './Skills'
 import Education from './Education'
 import Interests from './Interests'
 import Footer from './Footer'
-import styles from '../styles/Main.module.css'
 
 interface Selector {
     nav: { scrollTo: string }
@@ -30,11 +29,11 @@ const Main = () => {
     }, [scrollTo])
 
     return (
-        <div className="w-full h-min-screen" >
+        <div className="flex flex-col w-full h-min-screen" >
             <Section ><About /></Section>
+            <Section ><Skills /></Section>
             <Section ><Experience /></Section>
             <Section ><Projects /></Section>
-            <Section ><Skills /></Section>
             <Section ><Education /></Section>
             <Section ><Interests /></Section>
             <Footer />
