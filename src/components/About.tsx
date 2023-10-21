@@ -110,7 +110,7 @@ const About = () => {
                         transition={{ duration: 0.75, delay: 0.6 }}
                         viewport={{ once: true }}
                     >
-                        <IconContext.Provider value={{ color: 'rgb(54 83 20)' }}><FaLinkedin /></IconContext.Provider>
+                        <IconContext.Provider value={{ color: 'rgb(51 65 85)' }}><FaLinkedin /></IconContext.Provider>
                     </motion.a>
                     <motion.a ref={gitHubRef} className='hover:scale-110 duration-150 text-6xl sm:text-7xl' href='https://github.com/jpagtama' target='_blank' rel='noreferrer'
                         initial={{ opacity: 0 }}
@@ -118,7 +118,7 @@ const About = () => {
                         transition={{ duration: 0.75, delay: 0.7 }}
                         viewport={{ once: true }}
                     >
-                        <IconContext.Provider value={{ color: 'rgb(54 83 20)' }}><FaGithub /></IconContext.Provider>
+                        <IconContext.Provider value={{ color: 'rgb(51 65 85)' }}><FaGithub /></IconContext.Provider>
                     </motion.a>
                 </div>
                 <div className='flex items-end absolute min-w-[320px] w-full h-full -z-10 overflow-x-hidden bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] from-[rgba(27,39,53,1)] to-black' >
@@ -126,7 +126,6 @@ const About = () => {
                 </div>
             </div>
             <div ref={summaryRef} className='flex flex-col sm:flex-row flex-wrap justify-center items-center gap-16 sm:gap-48 w-full min-h-screen py-16 px-4' >
-
                 <motion.div className='sm:w-56 flex flex-col justify-center items-center gap-12'
                     initial={{ opacity: 0.15, y: 50 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -145,9 +144,9 @@ const About = () => {
                     viewport={{ once: true }}
                 >
                     <div className='flex justify-center items-center h-52 w-52 relative hexagon bg-gradient-to-bl from-slate-700 to-lime-900'>
-                        <IconContext.Provider value={{ size: '7rem', color: '#121212' }}><FaShieldAlt /></IconContext.Provider>
+                        <IconContext.Provider value={{ size: '7rem', color: '#121212' }}><SiStarship /></IconContext.Provider>
                     </div>
-                    <p className='text-center sm:text-2xl'>Security best practices are a must</p>
+                    <p className='text-center sm:text-2xl'>I aim for performant, scalable, and accessible solutions</p>
                 </motion.div>
                 <motion.div className='sm:w-56 flex flex-col justify-center items-center gap-12'
                     initial={{ opacity: 0.15, y: 50 }}
@@ -156,9 +155,9 @@ const About = () => {
                     viewport={{ once: true }}
                 >
                     <div className='flex justify-center items-center h-52 w-52 relative hexagon bg-gradient-to-bl from-slate-700 to-lime-900'>
-                        <IconContext.Provider value={{ size: '7rem', color: '#121212' }}><SiStarship /></IconContext.Provider>
+                        <IconContext.Provider value={{ size: '7rem', color: '#121212' }}><FaShieldAlt /></IconContext.Provider>
                     </div>
-                    <p className='text-center sm:text-2xl'>I aim for performant, scalable, and accessible solutions</p>
+                    <p className='text-center sm:text-2xl'>Security best practices are a must</p>
                 </motion.div>
             </div>
         </React.Fragment >
