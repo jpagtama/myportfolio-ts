@@ -29,7 +29,7 @@ const Main = () => {
     }, [scrollTo])
 
     return (
-        <div className="flex flex-col w-full h-min-screen" >
+        <div className="flex flex-col w-screen h-min-screen" >
             <Section ><About /></Section>
             <Section ><Skills /></Section>
             <Section ><Experience /></Section>
