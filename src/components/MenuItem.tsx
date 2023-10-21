@@ -19,7 +19,7 @@ const MenuItem = (props: Props) => {
 
     return (
         <motion.li onClick={clickHandler}
-            className='text-4xl sm:text-xl md:text-3xl cursor-pointer'
+            className='text-4xl sm:text-xl md:text-lg lg:text-3xl cursor-pointer'
             initial={{ opacity: 0, y: -50 }}
             animate={{ opacity: 1, y: 0 }}
             whileHover={{ scale: 1.10 }}
