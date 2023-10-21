@@ -1,4 +1,3 @@
-import styles from '../styles/Section.module.css'
 
 interface Props {
     children: JSX.Element
@@ -6,7 +5,7 @@ interface Props {
 
 const Section = (props: Props) => {
     return (
-        <section className={styles.section} >{props.children}</section>
+        <section className='w-full min-h-screen' >{props.children}</section>
     )
 }
 
