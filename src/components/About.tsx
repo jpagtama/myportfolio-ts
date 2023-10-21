@@ -63,18 +63,18 @@ const About = () => {
 
     return (
         <React.Fragment>
-            <div id='About' className='h-screen w-full flex flex-col justify-center items-center flex-wrap gap-8' >
-                <div className='flex flex-col sm:flex-row flex-wrap justify-center items-center gap-4 min-w-[320px] sm:gap-8' >
+            <div id='About' className='min-h-screen w-full flex flex-col justify-center items-center flex-wrap gap-8' >
+                <div className='flex flex-col sm:flex-row flex-wrap justify-center items-center gap-4 min-w-[320px] lg:gap-4 px-2 py-4 mt-12 sm:mt-0' >
                     <motion.div className='flex flex-col justify-center items-center sm:items-end gap-0 sm:gap-2'
                         initial={{ opacity: 0, y: 100 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ type: 'spring', duration: 0.75 }}
                         viewport={{ once: true }}
                     >
-                        <h1 ref={aboutRef} className='font-audiowide text-7xl md:text-9xl text-indigo-300 bg-gradient-to-b from-slate-100 to-slate-900 text-transparent bg-clip-text' >JULIAN</h1>
-                        <h1 className='font-audiowide text-4xl md:text-9xl text-indigo-300 bg-gradient-to-b from-slate-100 to-slate-900 text-transparent bg-clip-text' >PAGTAMA</h1>
+                        <h1 ref={aboutRef} className='font-audiowide text-7xl lg:text-9xl text-indigo-300 bg-gradient-to-b from-slate-100 to-slate-900 text-transparent bg-clip-text' >JULIAN</h1>
+                        <h1 className='font-audiowide text-4xl lg:text-9xl text-indigo-300 bg-gradient-to-b from-slate-100 to-slate-900 text-transparent bg-clip-text' >PAGTAMA</h1>
                     </motion.div>
-                    <ul className='flex flex-row flex-wrap sm:flex-col justify-center sm:justify-start gap-2 md:gap-4 sm:gap-2 text-sm sm:text-lg md:text-2xl p-2' >
+                    <ul className='flex flex-row flex-wrap sm:flex-col justify-center sm:justify-start gap-0 lg:gap-4 text-sm sm:text-lg lg:text-2xl p-2' >
                         <motion.li
                             initial={{ opacity: 0, y: 100 }}
                             whileInView={{ opacity: 1, y: 0 }}
@@ -108,24 +108,24 @@ const About = () => {
                             jpagtama@gmail.com
                         </motion.li>
                     </ul>
-                </div>
-                <div className='w-full flex justify-center gap-4'>
-                    <motion.a ref={linkedInRef} className='hover:scale-110 duration-150 text-6xl sm:text-7xl' href='https://www.linkedin.com/in/jpagtama/' target='_blank' rel='noreferrer'
-                        initial={{ opacity: 0 }}
-                        whileInView={{ opacity: 1 }}
-                        transition={{ duration: 0.75, delay: 0.6 }}
-                        viewport={{ once: true }}
-                    >
-                        <IconContext.Provider value={{ color: 'rgb(51 65 85)' }}><FaLinkedin /></IconContext.Provider>
-                    </motion.a>
-                    <motion.a ref={gitHubRef} className='hover:scale-110 duration-150 text-6xl sm:text-7xl' href='https://github.com/jpagtama' target='_blank' rel='noreferrer'
-                        initial={{ opacity: 0 }}
-                        whileInView={{ opacity: 1 }}
-                        transition={{ duration: 0.75, delay: 0.7 }}
-                        viewport={{ once: true }}
-                    >
-                        <IconContext.Provider value={{ color: 'rgb(51 65 85)' }}><FaGithub /></IconContext.Provider>
-                    </motion.a>
+                    <div className='w-full flex justify-center gap-2 lg:gap-4'>
+                        <motion.a ref={linkedInRef} className='hover:scale-110 duration-150 text-5xl lg:text-7xl' href='https://www.linkedin.com/in/jpagtama/' target='_blank' rel='noreferrer'
+                            initial={{ opacity: 0 }}
+                            whileInView={{ opacity: 1 }}
+                            transition={{ duration: 0.75, delay: 0.6 }}
+                            viewport={{ once: true }}
+                        >
+                            <IconContext.Provider value={{ color: 'rgb(51 65 85)' }}><FaLinkedin /></IconContext.Provider>
+                        </motion.a>
+                        <motion.a ref={gitHubRef} className='hover:scale-110 duration-150 text-5xl lg:text-7xl' href='https://github.com/jpagtama' target='_blank' rel='noreferrer'
+                            initial={{ opacity: 0 }}
+                            whileInView={{ opacity: 1 }}
+                            transition={{ duration: 0.75, delay: 0.7 }}
+                            viewport={{ once: true }}
+                        >
+                            <IconContext.Provider value={{ color: 'rgb(51 65 85)' }}><FaGithub /></IconContext.Provider>
+                        </motion.a>
+                    </div>
                 </div>
                 <div className='fixed top-0 h-screen w-full -z-10' >
                     <div className='flex items-end absolute min-w-[320px] w-full h-full overflow-x-hidden bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] from-[rgba(27,39,53,1)] to-black' >
