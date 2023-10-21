@@ -74,7 +74,7 @@ const About = () => {
                         <h1 ref={aboutRef} className='font-audiowide text-7xl lg:text-9xl text-indigo-300 bg-gradient-to-b from-slate-100 to-slate-900 text-transparent bg-clip-text' >JULIAN</h1>
                         <h1 className='font-audiowide text-4xl lg:text-9xl text-indigo-300 bg-gradient-to-b from-slate-100 to-slate-900 text-transparent bg-clip-text' >PAGTAMA</h1>
                     </motion.div>
-                    <ul className='flex flex-row flex-wrap sm:flex-col justify-center sm:justify-start gap-0 lg:gap-4 text-sm sm:text-lg lg:text-2xl p-2' >
+                    <ul className='flex flex-row flex-wrap sm:flex-col justify-center sm:justify-start gap-3 lg:gap-4 text-sm sm:text-lg lg:text-2xl p-2' >
                         <motion.li
                             initial={{ opacity: 0, y: 100 }}
                             whileInView={{ opacity: 1, y: 0 }}
@@ -133,8 +133,8 @@ const About = () => {
                     </div>
                 </div>
             </div>
-            <div ref={summaryRef} className='flex flex-col sm:flex-row flex-wrap justify-center items-center gap-16 sm:gap-48 w-full min-h-screen py-16 px-4 bg-dark' >
-                <motion.div className='sm:w-56 flex flex-col justify-center items-center gap-12'
+            <div ref={summaryRef} className='flex flex-col sm:flex-row flex-wrap justify-center items-center gap-12 lg:gap-48 w-full min-h-screen py-16 px-4 bg-dark' >
+                <motion.div className='sm:w-56 flex flex-col justify-center items-center gap-3 lg:gap-12'
                     initial={{ opacity: 0.15, y: 50 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ style: 'spring', duration: 0.3 }}
@@ -145,7 +145,7 @@ const About = () => {
                     </div>
                     <p className='text-center sm:text-2xl' >Crafting user-centric experiences is my passion</p>
                 </motion.div>
-                <motion.div className='sm:w-56 flex flex-col justify-center items-center gap-12'
+                <motion.div className='sm:w-56 flex flex-col justify-center items-center gap-3 lg:gap-12'
                     initial={{ opacity: 0.15, y: 50 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ style: 'spring', duration: 0.3 }}
@@ -156,7 +156,7 @@ const About = () => {
                     </div>
                     <p className='text-center sm:text-2xl'>I aim for performant, scalable, and accessible solutions</p>
                 </motion.div>
-                <motion.div className='sm:w-56 flex flex-col justify-center items-center gap-12'
+                <motion.div className='sm:w-56 flex flex-col justify-center items-center gap-3 lg:gap-12'
                     initial={{ opacity: 0.15, y: 50 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ style: 'spring', duration: 0.3 }}
