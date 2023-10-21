@@ -39,7 +39,7 @@ function Menu({ menuItems }: Props) {
                 transition={{ duration: 0.25 }}
                 exit={{ opacity: 0, y: -100 }}
             >
-                <ul className={`flex sm:flex-row items-center sm:gap-4 md:gap-12 mt-4 lg:mt-8 rounded-full px-10 sm:h-16 bg-slate-700 ${isAtTop ? 'bg-opacity-0' : 'bg-opacity-90'} hover:bg-opacity-100 duration-150 text-slate-300`}>
+                <ul className={`flex sm:flex-row items-center sm:gap-4 md:gap-12 mt-4 lg:mt-8 rounded-full px-10 sm:h-16 bg-slate-700 ${isAtTop ? 'bg-opacity-0 text-slate-700' : 'bg-opacity-90 text-slate-400 hover:bg-opacity-100'} duration-150 `}>
                     {menuSections}
                 </ul>
             </motion.nav>

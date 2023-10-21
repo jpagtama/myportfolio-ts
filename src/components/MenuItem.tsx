@@ -19,10 +19,10 @@ const MenuItem = (props: Props) => {
 
     return (
         <motion.li onClick={clickHandler}
-            className='text-4xl sm:text-xl md:text-lg lg:text-3xl cursor-pointer'
+            className='text-4xl sm:text-xl md:text-lg lg:text-3xl cursor-pointer hover:text-white'
             initial={{ opacity: 0, y: -50 }}
             animate={{ opacity: 1, y: 0 }}
-            whileHover={{ scale: 1.10, color: 'rgb(255 255 255)' }}
+            whileHover={{ scale: 1.10 }}
             transition={{ style: 'spring', duration: 0.25, delay: props.index ? props.index * 0.1 : 0, whileHover: { duration: 0.1 } }}
         >
             <motion.span
