@@ -9,7 +9,7 @@ interface Selector {
     nav: { showMenu: boolean }
 };
 
-const menuItems = ['About', 'Experience', 'Projects', 'Skills', 'Education', 'Interests'];
+const menuItems = ['About', 'Skills', 'Experience', 'Projects', 'Education', 'Interests'];
 
 const SideNav = () => {
     const { showMenu } = useSelector((state: Selector) => state.nav);
