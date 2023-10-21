@@ -38,7 +38,7 @@ function Menu({ menuItems }: Props) {
                 transition={{ duration: 0.25 }}
                 exit={{ opacity: 0, y: -100 }}
             >
-                <ul className='flex sm:flex-row items-center sm:gap-4 md:gap-6 sm:mt-8 rounded-full px-10 sm:h-16 bg-slate-700 bg-opacity-50 hover:bg-opacity-100 duration-150 text-slate-100'>
+                <ul className='flex sm:flex-row items-center sm:gap-4 md:gap-12 sm:mt-8 rounded-full px-10 sm:h-16 bg-slate-700 bg-opacity-50 hover:bg-opacity-100 duration-150 text-slate-100'>
                     {menuSections}
                 </ul>
             </motion.nav>
