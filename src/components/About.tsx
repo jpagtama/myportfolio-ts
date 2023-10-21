@@ -63,7 +63,7 @@ const About = () => {
 
     return (
         <React.Fragment>
-            <div id='About' className='h-screen w-full flex flex-col justify-center items-center flex-wrap gap-8'>
+            <div id='About' className='h-screen w-full flex flex-col justify-center items-center flex-wrap gap-8' >
                 <div className='flex flex-col sm:flex-row flex-wrap justify-center items-center gap-4 min-w-[320px] sm:gap-8' >
                     <motion.div className='flex flex-col justify-center items-center sm:items-end gap-0 sm:gap-2'
                         initial={{ opacity: 0, y: 100 }}
@@ -71,10 +71,10 @@ const About = () => {
                         transition={{ type: 'spring', duration: 0.75 }}
                         viewport={{ once: true }}
                     >
-                        <h1 ref={aboutRef} className='text-7xl md:text-9xl text-indigo-300 bg-gradient-to-b from-slate-100 to-slate-900 text-transparent bg-clip-text' >JULIAN</h1>
-                        <h1 className='text-4xl md:text-9xl text-indigo-300 bg-gradient-to-b from-slate-100 to-slate-900 text-transparent bg-clip-text' >PAGTAMA</h1>
+                        <h1 ref={aboutRef} className='font-audiowide text-7xl md:text-9xl text-indigo-300 bg-gradient-to-b from-slate-100 to-slate-900 text-transparent bg-clip-text' >JULIAN</h1>
+                        <h1 className='font-audiowide text-4xl md:text-9xl text-indigo-300 bg-gradient-to-b from-slate-100 to-slate-900 text-transparent bg-clip-text' >PAGTAMA</h1>
                     </motion.div>
-                    <ul className='flex flex-row sm:flex-col justify-start gap-2 md:gap-8 sm:gap-4 flex-wrap text-xs sm:text-lg md:text-3xl' >
+                    <ul className='flex flex-row flex-wrap sm:flex-col justify-center sm:justify-start gap-2 md:gap-4 sm:gap-2 text-sm sm:text-lg md:text-2xl p-2' >
                         <motion.li
                             initial={{ opacity: 0, y: 100 }}
                             whileInView={{ opacity: 1, y: 0 }}
@@ -83,20 +83,26 @@ const About = () => {
                         >
                             Software Developer
                         </motion.li>
-                        {/* <span className='visible sm:hidden' >&bull;</span> */}
                         <motion.li
                             initial={{ opacity: 0, y: 100 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ type: 'spring', duration: 0.75, delay: 0.4 }}
                             viewport={{ once: true }}
                         >
-                            Los Angeles, CA
+                            B.S. Computer Science CSULB
                         </motion.li>
-                        {/* <span className='visible sm:hidden' >&bull;</span> */}
                         <motion.li
                             initial={{ opacity: 0, y: 100 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ type: 'spring', duration: 0.75, delay: 0.5 }}
+                            viewport={{ once: true }}
+                        >
+                            Los Angeles, CA
+                        </motion.li>
+                        <motion.li
+                            initial={{ opacity: 0, y: 100 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ type: 'spring', duration: 0.75, delay: 0.6 }}
                             viewport={{ once: true }}
                         >
                             jpagtama@gmail.com
@@ -121,11 +127,13 @@ const About = () => {
                         <IconContext.Provider value={{ color: 'rgb(51 65 85)' }}><FaGithub /></IconContext.Provider>
                     </motion.a>
                 </div>
-                <div className='flex items-end absolute min-w-[320px] w-full h-full -z-10 overflow-x-hidden bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] from-[rgba(27,39,53,1)] to-black' >
-                    {renderStars}
+                <div className='fixed top-0 h-screen w-full -z-10' >
+                    <div className='flex items-end absolute min-w-[320px] w-full h-full overflow-x-hidden bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] from-[rgba(27,39,53,1)] to-black' >
+                        {renderStars}
+                    </div>
                 </div>
             </div>
-            <div ref={summaryRef} className='flex flex-col sm:flex-row flex-wrap justify-center items-center gap-16 sm:gap-48 w-full min-h-screen py-16 px-4' >
+            <div ref={summaryRef} className='flex flex-col sm:flex-row flex-wrap justify-center items-center gap-16 sm:gap-48 w-full min-h-screen py-16 px-4 bg-[#121212]' >
                 <motion.div className='sm:w-56 flex flex-col justify-center items-center gap-12'
                     initial={{ opacity: 0.15, y: 50 }}
                     whileInView={{ opacity: 1, y: 0 }}
