@@ -5,9 +5,14 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    fontFamily: {
+      'audiowide': ['Audiowide', 'sans-serif']
+    },
     extend: {
       backgroundColor: {
+        dark: '#121212',
         accent: '#a5b4fc'
+
       }
     },
   },
