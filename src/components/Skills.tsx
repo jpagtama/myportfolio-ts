@@ -1,9 +1,12 @@
-import React, { useEffect, useState } from 'react'
-import { useDispatch } from 'react-redux'
-import { useInView } from 'react-intersection-observer'
-import { navActions } from '../store/navSlice'
-import CheckMark from './CheckMark'
-import styles from '../styles/Skills.module.css'
+import { useEffect, useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { useInView } from 'react-intersection-observer';
+import { navActions } from '../store/navSlice';
+import { FaReact, FaNode, FaGithubAlt, FaHtml5, FaCss3Alt } from 'react-icons/fa';
+import { SiTypescript, SiPostgresql, SiJest } from 'react-icons/si';
+import { TbBrandJavascript, TbBrandNextjs } from 'react-icons/tb';
+import { IconContext } from 'react-icons';
+import { motion } from 'framer-motion';
 
 const Skills = () => {
     const [alreadyViewed, setAlreadyViewed] = useState(false)
@@ -12,26 +15,7 @@ const Skills = () => {
     const { ref, inView } = useInView({
         threshold: 0,
     });
-    const { ref: codeRef, inView: codeInView } = useInView({
-        threshold: 1,
-        triggerOnce: true
-    });
-    const { ref: frameworksRef, inView: frameworksInView } = useInView({
-        threshold: 0.5,
-        triggerOnce: true
-    });
-    const { ref: toolsRef, inView: toolsInView } = useInView({
-        threshold: 0.5,
-        triggerOnce: true
-    });
-    const { ref: libRef, inView: libInView } = useInView({
-        threshold: 0.5,
-        triggerOnce: true
-    });
-    const { ref: softwareRef, inView: softwareInView } = useInView({
-        threshold: 0.5,
-        triggerOnce: true
-    });
+
     useEffect(() => {
         if (inView) dispatch(navActions.activate('skills'))
     }, [inView, dispatch]);
@@ -42,55 +26,63 @@ const Skills = () => {
     }, [inView, alreadyViewed])
 
     return (
-        <>
-            <div id="Skills" className={styles.headingContainer}>
-                <h1 ref={ref} className={alreadyViewed ? styles.slideIn : ''} >Technical Skills</h1>
-            </div>
-            <div className={styles.skillList}>
-                <h3>Languages</h3>
-                <ul ref={codeRef} className={styles.list} >
-                    <li><CheckMark className={`${styles.checkMarkInit} ${codeInView ? styles.animateCheckMark1 : ''}`} /><span>JavaScript</span></li>
-                    <li><CheckMark className={`${styles.checkMarkInit} ${codeInView ? styles.animateCheckMark2 : ''}`} /><span>TypeScript</span></li>
-                    <li><CheckMark className={`${styles.checkMarkInit} ${codeInView ? styles.animateCheckMark3 : ''}`} /><span>SQL</span></li>
-                </ul>
-                <h3>Frameworks</h3>
-                <ul ref={frameworksRef} className={styles.list}>
-                    <li><CheckMark className={`${styles.checkMarkInit} ${frameworksInView ? styles.animateCheckMark1 : ''}`} /><span>React</span></li>
-                    <li><CheckMark className={`${styles.checkMarkInit} ${frameworksInView ? styles.animateCheckMark2 : ''}`} /><span>Next.js</span></li>
-                    <li><CheckMark className={`${styles.checkMarkInit} ${frameworksInView ? styles.animateCheckMark3 : ''}`} /><span>Vitest</span></li>
-                    <li><CheckMark className={`${styles.checkMarkInit} ${frameworksInView ? styles.animateCheckMark4 : ''}`} /><span>Jest</span></li>
-                </ul>
-                <h3>Developer Tools</h3>
-                <ul ref={toolsRef} className={styles.list} >
-                    <li><CheckMark className={`${styles.checkMarkInit} ${toolsInView ? styles.animateCheckMark1 : ''}`} /><span>Git</span></li>
-                    <li><CheckMark className={`${styles.checkMarkInit} ${toolsInView ? styles.animateCheckMark2 : ''}`} /><span>Node.js</span></li>
-                    <li><CheckMark className={`${styles.checkMarkInit} ${toolsInView ? styles.animateCheckMark3 : ''}`} /><span>Next.js</span></li>
-                    <li><CheckMark className={`${styles.checkMarkInit} ${toolsInView ? styles.animateCheckMark4 : ''}`} /><span>React Dev Tools</span></li>
-                    <li><CheckMark className={`${styles.checkMarkInit} ${toolsInView ? styles.animateCheckMark5 : ''}`} /><span>Git</span></li>
-                    <li><CheckMark className={`${styles.checkMarkInit} ${toolsInView ? styles.animateCheckMark6 : ''}`} /><span>Redux DevTools</span></li>
-                    <li><CheckMark className={`${styles.checkMarkInit} ${toolsInView ? styles.animateCheckMark7 : ''}`} /><span>Prisma</span></li>
-                </ul>
-                <h3>Libraries</h3>
-                <ul ref={libRef} className={styles.list} >
-                    <li><CheckMark className={`${styles.checkMarkInit} ${libInView ? styles.animateCheckMark1 : ''}`} /><span>Redux Toolkit</span></li>
-                    <li><CheckMark className={`${styles.checkMarkInit} ${libInView ? styles.animateCheckMark2 : ''}`} /><span>Axios</span></li>
-                    <li><CheckMark className={`${styles.checkMarkInit} ${libInView ? styles.animateCheckMark3 : ''}`} /><span>NextAuth.js</span></li>
-                    <li><CheckMark className={`${styles.checkMarkInit} ${libInView ? styles.animateCheckMark4 : ''}`} /><span>Chart.js</span></li>
-                    <li><CheckMark className={`${styles.checkMarkInit} ${libInView ? styles.animateCheckMark5 : ''}`} /><span>Nodemailer</span></li>
-                    <li><CheckMark className={`${styles.checkMarkInit} ${libInView ? styles.animateCheckMark6 : ''}`} /><span>jQuery</span></li>
-                </ul>
-                <h3>Software</h3>
-                <ul ref={softwareRef} className={styles.list} >
-                    <li><CheckMark className={`${styles.checkMarkInit} ${softwareInView ? styles.animateCheckMark1 : ''}`} /><span>VS Code</span></li>
-                    <li><CheckMark className={`${styles.checkMarkInit} ${softwareInView ? styles.animateCheckMark2 : ''}`} /><span>Jira</span></li>
-                    <li><CheckMark className={`${styles.checkMarkInit} ${softwareInView ? styles.animateCheckMark3 : ''}`} /><span>pgAdmin</span></li>
-                    <li><CheckMark className={`${styles.checkMarkInit} ${softwareInView ? styles.animateCheckMark4 : ''}`} /><span>Supabase</span></li>
-                    <li><CheckMark className={`${styles.checkMarkInit} ${softwareInView ? styles.animateCheckMark5 : ''}`} /><span>Postman</span></li>
-                    <li><CheckMark className={`${styles.checkMarkInit} ${softwareInView ? styles.animateCheckMark6 : ''}`} /><span>macOS</span></li>
-                    <li><CheckMark className={`${styles.checkMarkInit} ${softwareInView ? styles.animateCheckMark7 : ''}`} /><span>Windows</span></li>
-                </ul>
-            </div>
-        </>
+        <div className='flex flex-col justify-center items-center gap-12 bg-dark sm:gap-24 w-full min-h-screen '>
+            <motion.h1 ref={ref} className='text-5xl md:text-9xl text-center px-2 font-audiowide bg-gradient-to-b from-slate-100 to-slate-900 text-transparent bg-clip-text'
+                initial={{ opacity: 0.0, x: '-100px' }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.3 }}
+                viewport={{ once: true }}
+            >
+                Technical Skills
+            </motion.h1>
+            <motion.div className='flex flex-wrap justify-center gap-6 sm:gap-12 w-3/4 max-w-5xl'
+                initial={{ opacity: 0.15, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ style: 'spring', duration: 0.7 }}
+                viewport={{ once: true }}
+            >
+                <motion.div className='flex flex-col gap-1 text-center w-16 h-16 sm:w-28 sm:h-28' >
+                    <IconContext.Provider value={{ size: '100%', color: 'rgb(148 163 184)' }}><FaReact /></IconContext.Provider>
+                    <span>React</span>
+                </motion.div>
+                <motion.div className='flex flex-col gap-1 text-center w-16 h-16 sm:w-28 sm:h-28' >
+                    <IconContext.Provider value={{ size: '100%', color: 'rgb(148 163 184)' }}><TbBrandJavascript /></IconContext.Provider>
+                    <span>JavaScript</span>
+                </motion.div>
+                <motion.div className='flex flex-col gap-1 text-center w-16 h-16 sm:w-28 sm:h-28' >
+                    <IconContext.Provider value={{ size: '100%', color: 'rgb(148 163 184)' }}><SiTypescript /></IconContext.Provider>
+                    <span>TypeScript</span>
+                </motion.div>
+                <motion.div className='flex flex-col gap-1 text-center w-16 h-16 sm:w-28 sm:h-28' >
+                    <IconContext.Provider value={{ size: '100%', color: 'rgb(148 163 184)' }}><TbBrandNextjs /></IconContext.Provider>
+                    <span>Next.js</span>
+                </motion.div>
+                <motion.div className='flex flex-col gap-1 text-center w-16 h-16 sm:w-28 sm:h-28' >
+                    <IconContext.Provider value={{ size: '100%', color: 'rgb(148 163 184)' }}><FaGithubAlt /></IconContext.Provider>
+                    <span>GitHub</span>
+                </motion.div>
+                <motion.div className='flex flex-col gap-1 text-center w-16 h-16 sm:w-28 sm:h-28' >
+                    <IconContext.Provider value={{ size: '100%', color: 'rgb(148 163 184)' }}><FaNode /></IconContext.Provider>
+                    <span>Node.js</span>
+                </motion.div>
+                <motion.div className='flex flex-col gap-1 text-center w-16 h-16 sm:w-28 sm:h-28' >
+                    <IconContext.Provider value={{ size: '100%', color: 'rgb(148 163 184)' }}><SiPostgresql /></IconContext.Provider>
+                    <span>SQL</span>
+                </motion.div>
+                <motion.div className='flex flex-col gap-1 text-center w-16 h-16 sm:w-28 sm:h-28' >
+                    <IconContext.Provider value={{ size: '100%', color: 'rgb(148 163 184)' }}><SiJest /></IconContext.Provider>
+                    <span>Jest</span>
+                </motion.div>
+                <motion.div className='flex flex-col gap-1 text-center w-16 h-16 sm:w-28 sm:h-28' >
+                    <IconContext.Provider value={{ size: '100%', color: 'rgb(148 163 184)' }}><FaHtml5 /></IconContext.Provider>
+                    <span>HTML</span>
+                </motion.div>
+                <motion.div className='flex flex-col gap-1 text-center w-16 h-16 sm:w-28 sm:h-28' >
+                    <IconContext.Provider value={{ size: '100%', color: 'rgb(148 163 184)' }}><FaCss3Alt /></IconContext.Provider>
+                    <span>CSS</span>
+                </motion.div>
+            </motion.div>
+        </div>
     )
 }
 
