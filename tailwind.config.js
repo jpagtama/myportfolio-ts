@@ -10,7 +10,8 @@ export default {
     },
     extend: {
       backgroundColor: {
-        dark: '#121212',
+        charcoal: '#121212',
+        'charcoal-light': '#151515',
         accent: '#a5b4fc'
 
       }
