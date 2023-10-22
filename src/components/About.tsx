@@ -133,7 +133,7 @@ const About = () => {
                     </div>
                 </div>
             </div>
-            <div ref={summaryRef} className='flex flex-col justify-center items-center py-16 px-4 w-full min-h-screen bg-dark' >
+            <div ref={summaryRef} className='flex flex-col justify-center items-center py-16 px-4 w-full min-h-screen bg-charcoal-light' >
                 <div className='flex flex-col sm:flex-row sm:justify-center items-center sm:items-start flex-wrap gap-12 lg:gap-48' >
                     <motion.div className='sm:w-56 flex flex-col justify-center items-center gap-3 lg:gap-12'
                         initial={{ opacity: 0.15, y: 50 }}
