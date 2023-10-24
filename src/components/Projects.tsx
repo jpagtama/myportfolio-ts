@@ -11,22 +11,15 @@ const Projects = () => {
     const dispatch = useDispatch()
     const { ref, inView } = useInView({
         threshold: 0,
-    })
-    const [alreadyViewed, setAlreadyViewed] = useState(false)
+    });
 
     useEffect(() => {
         if (inView) dispatch(navActions.activate('projects'))
     }, [inView, dispatch])
 
-    useEffect(() => {
-        if (inView && !alreadyViewed) {
-            setAlreadyViewed(true)
-        }
-    }, [inView, alreadyViewed])
-
     return (
-        <div className='flex flex-col justify-center items-center gap-12 bg-charcoal sm:gap-24 w-full min-h-screen py-12 overflow-x-hidden'>
-            <motion.h1 ref={ref} id='Projects' className='text-5xl md:text-9xl text-center px-2 pb-12 font-audiowide bg-gradient-to-b from-slate-100 to-slate-900 text-transparent bg-clip-text'
+        <div ref={ref} id='projects' className='flex flex-col justify-center items-center gap-12 bg-charcoal sm:gap-24 w-full min-h-screen py-12 overflow-x-hidden'>
+            <motion.h1 className='text-5xl md:text-9xl text-center px-2 pb-12 font-audiowide bg-gradient-to-b from-slate-100 to-slate-900 text-transparent bg-clip-text'
                 initial={{ opacity: 0.0, x: '100px' }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.3 }}

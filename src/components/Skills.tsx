@@ -9,7 +9,6 @@ import { IconContext } from 'react-icons';
 import { motion } from 'framer-motion';
 
 const Skills = () => {
-    const [alreadyViewed, setAlreadyViewed] = useState(false)
     const dispatch = useDispatch();
 
     const { ref, inView } = useInView({
@@ -19,15 +18,10 @@ const Skills = () => {
     useEffect(() => {
         if (inView) dispatch(navActions.activate('skills'))
     }, [inView, dispatch]);
-    useEffect(() => {
-        if (inView && !alreadyViewed) {
-            setAlreadyViewed(true)
-        }
-    }, [inView, alreadyViewed])
 
     return (
-        <div className='flex flex-col justify-center items-center gap-12 bg-charcoal sm:gap-24 w-full min-h-screen py-8'>
-            <motion.h1 ref={ref} className='text-5xl md:text-9xl text-center px-2 font-audiowide bg-gradient-to-b from-slate-100 to-slate-900 text-transparent bg-clip-text'
+        <div id='skills' ref={ref} className='flex flex-col justify-center items-center gap-12 bg-charcoal sm:gap-24 w-full min-h-screen py-8'>
+            <motion.h1 className='text-5xl md:text-9xl text-center px-2 font-audiowide bg-gradient-to-b from-slate-100 to-slate-900 text-transparent bg-clip-text'
                 initial={{ opacity: 0.0, x: '-100px' }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.3 }}

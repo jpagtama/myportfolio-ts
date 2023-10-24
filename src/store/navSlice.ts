@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
-    active: 'about',
+    active: 'home',
     showMenu: false,
     scrollTo: ''
 }

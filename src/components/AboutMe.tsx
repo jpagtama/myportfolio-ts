@@ -6,24 +6,17 @@ import profilePic from '../assets/julianpagtama.png';
 import { motion } from 'framer-motion'
 
 const AboutMe = () => {
-    const [alreadyViewed, setAlreadyViewed] = useState(false)
     const dispatch = useDispatch()
     const { ref, inView } = useInView({
         threshold: 0,
     })
     useEffect(() => {
-        if (inView) dispatch(navActions.activate('interests'))
-    }, [inView, dispatch])
-
-    useEffect(() => {
-        if (inView && !alreadyViewed) {
-            setAlreadyViewed(true)
-        }
-    }, [inView, alreadyViewed])
+        if (inView) dispatch(navActions.activate('about me'));
+    }, [inView, dispatch]);
 
     return (
-        <div className='flex flex-col justify-center items-center gap-12 sm:gap-24 w-full min-h-screen overflow-x-hidden py-12'>
-            <motion.h1 id='AboutMe' className='text-5xl md:text-9xl text-center px-2 font-audiowide bg-gradient-to-b from-slate-100 to-slate-900 text-transparent bg-clip-text'
+        <div id='about me' ref={ref} className='flex flex-col justify-center items-center gap-12 sm:gap-24 w-full min-h-screen overflow-x-hidden py-12'>
+            <motion.h1 className='text-5xl md:text-9xl text-center px-2 font-audiowide bg-gradient-to-b from-slate-100 to-slate-900 text-transparent bg-clip-text'
                 initial={{ opacity: 0.0, x: '-100px' }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.3 }}
@@ -38,19 +31,19 @@ const AboutMe = () => {
                     transition={{ style: 'spring', duration: 0.7 }}
                     viewport={{ once: true }}
                 >
-                    <img src={profilePic} alt="Julian Pagtama image" />
+                    <img className='opacity-80 hover:opacity-100 duration-200' src={profilePic} alt="Julian Pagtama image" />
                 </motion.div>
-                <motion.div
+                <motion.div className='text-slate-400'
                     initial={{ opacity: 0.15, y: 50 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ style: 'spring', duration: 0.7 }}
                     viewport={{ once: true }}
                 >
                     <p className='p-4 max-w-xl leading-loose' >
-                        I believe that the web is more than just a collection of pages and links. It is a powerful medium for communication, collaboration, and creativity. It is a platform for expressing ideas, sharing knowledge, and building communities. It is a space where everyone can have a voice, a choice, and an impact.
+                        <span className='font-bold text-slate-300'>I believe that the web is more than just a collection of pages and links.</span> It is a powerful medium for communication, collaboration, and creativity. It is a platform for expressing ideas, sharing knowledge, and building communities. It is a space where everyone can have a voice, a choice, and an impact.
                     </p>
                     <p className='p-4 max-w-xl leading-loose'>
-                        Not only do I enjoy creating experiences that are engaging and user-friendly, I also love creating functional applications that solve real-world problems. My career in professional web development has allowed me to synthesize front-end and back-end technologies to create complete products.
+                        <span className='font-bold text-slate-300'>I love creating functional applications that solve real-world problems.</span> My career in professional web development has allowed me to synthesize front-end and back-end technologies into complete products that focuses on intuitive user-experience and optimal data structures. I'm constantly learning new technologies and love to collaborate and share my knowledge and experience.
                     </p>
                 </motion.div>
             </div>

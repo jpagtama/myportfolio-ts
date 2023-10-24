@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { navActions } from '../store/navSlice';
 import { useInView } from 'react-intersection-observer';
@@ -11,33 +11,17 @@ import { IconContext } from 'react-icons';
 const Experience = () => {
     const [openRegal, setOpenRegal] = useState(false);
     const [openNonfat, setOpenNonfat] = useState(false);
-    const dispatch = useDispatch()
-    const { ref: expRef, inView: expInView } = useInView({
+    const dispatch = useDispatch();
+    const { ref: ref, inView: expInView } = useInView({
         threshold: 0,
-    })
-    const { ref: firstSummaryRef, inView: firstSummaryInView } = useInView({
-        threshold: 0,
-        triggerOnce: true
-    })
-    const { ref: secondSummaryRef, inView: secondSummaryInView } = useInView({
-        threshold: 0,
-        triggerOnce: true
-    })
-
-    const [alreadyViewed, setAlreadyViewed] = useState(false)
+    });
 
     useEffect(() => {
-        if (expInView) dispatch(navActions.activate('experience'))
-    }, [expInView, dispatch])
-
-    useEffect(() => {
-        if (expInView && !alreadyViewed) {
-            setAlreadyViewed(true)
-        }
-    }, [expInView, alreadyViewed])
+        if (expInView) dispatch(navActions.activate('experience'));
+    }, [expInView, dispatch]);
 
     return (
-        <div className='flex flex-col justify-center items-center gap-12 bg-charcoal-light sm:gap-24 w-full min-h-screen py-12 overflow-x-hidden'>
+        <div id='experience' ref={ref} className='flex flex-col justify-center items-center gap-12 bg-charcoal-light sm:gap-24 w-full min-h-screen py-12 overflow-x-hidden'>
             <motion.h1 className='text-5xl md:text-9xl text-center px-2 font-audiowide bg-gradient-to-b from-slate-100 to-slate-900 text-transparent bg-clip-text'
                 initial={{ opacity: 0.0, x: '100px' }}
                 whileInView={{ opacity: 1, x: 0 }}

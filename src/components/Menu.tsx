@@ -1,11 +1,8 @@
-import { useState } from 'react'
-import MenuItem from './MenuItem'
-import { useSelector } from 'react-redux'
-import { motion, AnimatePresence, useMotionValueEvent, useScroll } from 'framer-motion'
-
-interface Selector {
-    nav: { active: string }
-}
+import { useState, useEffect } from 'react';
+import MenuItem from './MenuItem';
+import { useSelector } from 'react-redux';
+import { RootState } from '../store';
+import { motion, AnimatePresence, useMotionValueEvent, useScroll } from 'framer-motion';
 
 interface Props {
     menuItems: string[]
@@ -15,7 +12,7 @@ function Menu({ menuItems }: Props) {
     const [prevScrollVal, setPrevScrollVal] = useState(0);
     const [isAtTop, setIsAtTop] = useState(true);
     const [showNav, setShowNav] = useState(true);
-    const activeLabel = useSelector((state: Selector) => state.nav.active)
+    const activeLabel = useSelector((state: RootState) => state.nav.active);
     const { scrollY } = useScroll();
 
     useMotionValueEvent(scrollY, "change", (latest) => {
@@ -26,8 +23,8 @@ function Menu({ menuItems }: Props) {
     });
 
     const menuSections = menuItems.map((item, i) => {
-        const isActive = item.toLowerCase() === activeLabel.toLowerCase()
-        return <MenuItem key={i} title={item} isActive={isActive} />
+        const isActive = item.toLowerCase() === activeLabel.toLowerCase();
+        return <MenuItem key={i} title={item} isActive={isActive} />;
     });
 
     return <AnimatePresence>

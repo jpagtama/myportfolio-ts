@@ -9,35 +9,15 @@ import { motion } from 'framer-motion';
 
 const Home = () => {
     const dispatch = useDispatch()
-    const { ref: aboutRef, inView: aboutInView } = useInView({
+    const { ref: ref, inView: homeInView } = useInView({
         threshold: 0,
     })
-    const { ref: summaryRef, inView: summaryInView } = useInView({
-        threshold: 0,
-        triggerOnce: true
-    })
-    const { ref: linkedInRef, inView: linkedInView } = useInView({
-        threshold: 0,
-        triggerOnce: true
-    })
-    const { ref: gitHubRef, inView: gitHubInView } = useInView({
-        threshold: 0,
-        triggerOnce: true
-    })
-
-    const [alreadyViewed, setAlreadyViewed] = useState(false)
 
     useEffect(() => {
-        if (aboutInView) {
-            dispatch(navActions.activate('about'))
+        if (homeInView) {
+            dispatch(navActions.activate('home'))
         }
-    }, [aboutInView, dispatch])
-
-    useEffect(() => {
-        if (aboutInView && !alreadyViewed) {
-            setAlreadyViewed(true)
-        }
-    }, [aboutInView, alreadyViewed]);
+    }, [homeInView, dispatch])
 
     const renderStars = useMemo(() => {
         const randomPositions = [];
@@ -63,7 +43,7 @@ const Home = () => {
 
     return (
         <React.Fragment>
-            <div id='About' className='min-h-screen w-full flex flex-col justify-center items-center flex-wrap gap-8' >
+            <div ref={ref} id='home' className='min-h-screen w-full flex flex-col justify-center items-center flex-wrap gap-8' >
                 <div className='flex flex-col sm:flex-row flex-wrap justify-center items-center gap-4 min-w-[320px] lg:gap-4 px-2 py-4 mt-12 sm:mt-0' >
                     <motion.div className='flex flex-col justify-center items-center sm:items-end gap-0 sm:gap-2'
                         initial={{ opacity: 0, y: 100 }}
@@ -71,7 +51,7 @@ const Home = () => {
                         transition={{ type: 'spring', duration: 0.75 }}
                         viewport={{ once: true }}
                     >
-                        <h1 ref={aboutRef} className='font-audiowide text-7xl lg:text-9xl text-indigo-300 bg-gradient-to-b from-slate-100 to-slate-900 text-transparent bg-clip-text' >JULIAN</h1>
+                        <h1 className='font-audiowide text-7xl lg:text-9xl text-indigo-300 bg-gradient-to-b from-slate-100 to-slate-900 text-transparent bg-clip-text' >JULIAN</h1>
                         <h1 className='font-audiowide text-4xl lg:text-9xl text-indigo-300 bg-gradient-to-b from-slate-100 to-slate-900 text-transparent bg-clip-text' >PAGTAMA</h1>
                     </motion.div>
                     <ul className='flex flex-row flex-wrap sm:flex-col justify-center sm:justify-start gap-3 lg:gap-4 text-sm sm:text-lg lg:text-2xl p-2' >
@@ -109,21 +89,21 @@ const Home = () => {
                         </motion.li>
                     </ul>
                     <div className='w-full flex justify-center gap-2 lg:gap-4'>
-                        <motion.a ref={linkedInRef} className='hover:scale-110 duration-150 text-5xl lg:text-7xl' href='https://www.linkedin.com/in/jpagtama/' target='_blank' rel='noreferrer'
+                        <motion.a className='hover:scale-110 duration-150 text-5xl lg:text-7xl text-lime-900' href='https://www.linkedin.com/in/jpagtama/' target='_blank' rel='noreferrer'
                             initial={{ opacity: 0 }}
                             whileInView={{ opacity: 1 }}
                             transition={{ duration: 0.75, delay: 0.6 }}
                             viewport={{ once: true }}
                         >
-                            <IconContext.Provider value={{ color: 'rgb(51 65 85)' }}><FaLinkedin /></IconContext.Provider>
+                            <FaLinkedin />
                         </motion.a>
-                        <motion.a ref={gitHubRef} className='hover:scale-110 duration-150 text-5xl lg:text-7xl' href='https://github.com/jpagtama' target='_blank' rel='noreferrer'
+                        <motion.a className='hover:scale-110 duration-150 text-5xl lg:text-7xl text-lime-900' href='https://github.com/jpagtama' target='_blank' rel='noreferrer'
                             initial={{ opacity: 0 }}
                             whileInView={{ opacity: 1 }}
                             transition={{ duration: 0.75, delay: 0.7 }}
                             viewport={{ once: true }}
                         >
-                            <IconContext.Provider value={{ color: 'rgb(51 65 85)' }}><FaGithub /></IconContext.Provider>
+                            <FaGithub />
                         </motion.a>
                     </div>
                 </div>
@@ -133,7 +113,7 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-            <div ref={summaryRef} className='flex flex-col justify-center items-center py-16 px-4 w-full min-h-screen bg-charcoal-light' >
+            <div className='flex flex-col justify-center items-center py-16 px-4 w-full min-h-screen bg-charcoal-light' >
                 <div className='flex flex-col sm:flex-row sm:justify-center items-center sm:items-start flex-wrap gap-12 lg:gap-48' >
                     <motion.div className='sm:w-56 flex flex-col justify-center items-center gap-3 lg:gap-12'
                         initial={{ opacity: 0.15, y: 50 }}
