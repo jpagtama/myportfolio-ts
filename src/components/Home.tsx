@@ -7,7 +7,7 @@ import { IconContext } from 'react-icons/lib';
 import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
 
-const About = () => {
+const Home = () => {
     const dispatch = useDispatch()
     const { ref: aboutRef, inView: aboutInView } = useInView({
         threshold: 0,
@@ -174,4 +174,4 @@ const About = () => {
     )
 }
 
-export default About
+export default Home;
