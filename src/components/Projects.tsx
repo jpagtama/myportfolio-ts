@@ -48,7 +48,7 @@ const Projects = () => {
                             animate={{ y: 0, opacity: 1 }}
                         >
                             <h4 className='text-5xl' >Finflexi</h4>
-                            <span className='text-black' >React | TypeScript | Next.js | PostgreSQL</span>
+                            <span className='text-slate-400' >React | TypeScript | Next.js | PostgreSQL</span>
                         </motion.div>
                         {/* <p >Finflexi is a fintech app that allows you to view market and company data.</p> */}
                         <div className='flex gap-4'>
@@ -69,8 +69,8 @@ const Projects = () => {
                             initial={{ y: 100, opacity: 0 }}
                             animate={{ y: 0, opacity: 1 }}
                         >
-                            <h4 className='text-5xl text-center' >React Event Viewer Calendar</h4>
-                            <span className='text-black' >React | TypeScript | NPM</span>
+                            <h4 className='text-5xl text-center' >Event Viewer Calendar</h4>
+                            <span className='text-slate-400' >React | TypeScript | NPM</span>
                         </motion.div>
                         {/* <p>react-event-viewer-calendar is an npm package that allows developers to display daily events in a monthly view. It's lightweight, responsive, and customizable.</p> */}
                         <div className='flex gap-4'>
@@ -92,7 +92,7 @@ const Projects = () => {
                             animate={{ y: 0, opacity: 1 }}
                         >
                             <h4 className='text-5xl text-center' >Flekin</h4>
-                            <span className='text-black' >React | JavaScript | NPM</span>
+                            <span className='text-slate-400' >React | JavaScript | NPM</span>
                         </motion.div>
                         {/* <p >Flekin is an npm package that allows developers to automatically extract the number of words, syllables, and sentences. Returns a readability score as processed by the Flesch-Kincaid formula.</p> */}
                         <div className='flex gap-4'>
