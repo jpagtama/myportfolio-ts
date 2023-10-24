@@ -46,10 +46,10 @@ const Experience = () => {
             >
                 Work Experience
             </motion.h1>
-            <div className='flex flex-col justify-start items-center gap-12 w-full'>
-                <div onClick={() => setOpenRegal(!openRegal)}>
+            <div className='flex flex-col justify-start items-center gap-12 w-full '>
+                <div className='hover:cursor-pointer' onClick={() => setOpenRegal(!openRegal)}>
                     <motion.div
-                        className='flex flex-col justify-start relative w-full sm:max-w-[800px] h-[200px] bg-charcoal hover:cursor-pointer'
+                        className='flex flex-col justify-start relative w-full sm:max-w-[800px] h-[200px] bg-charcoal'
                         initial={{ opacity: 0.15, y: 50 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ style: 'spring', duration: 0.3 }}
@@ -70,7 +70,7 @@ const Experience = () => {
                             </IconContext.Provider>
                         </div>
                     </motion.div >
-                    <motion.div className={`flex flex-col max-w-[800px] bg-charcoal overflow-hidden hover:cursor-pointer`}
+                    <motion.div className={`flex flex-col max-w-[800px] bg-charcoal overflow-hidden`}
                         initial={{ height: 0 }}
                         animate={{ height: !openRegal ? 0 : 'auto' }}
                     >
@@ -81,9 +81,9 @@ const Experience = () => {
                         </p>
                     </motion.div>
                 </div>
-                <div onClick={() => setOpenNonfat(!openNonfat)}>
+                <div className='hover:cursor-pointer' onClick={() => setOpenNonfat(!openNonfat)}>
                     <motion.div
-                        className='flex flex-col justify-start relative w-full sm:max-w-[800px] h-[200px] bg-charcoal hover:cursor-pointer'
+                        className='flex flex-col justify-start relative w-full sm:max-w-[800px] h-[200px] bg-charcoal'
                         initial={{ opacity: 0.15, y: 50 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ style: 'spring', duration: 0.7 }}
@@ -104,7 +104,7 @@ const Experience = () => {
                             </IconContext.Provider>
                         </div>
                     </motion.div>
-                    <motion.div className={`flex flex-col justify-start w-full max-w-[800px] bg-charcoal overflow-hidden hover:cursor-pointer`}
+                    <motion.div className={`flex flex-col justify-start w-full max-w-[800px] bg-charcoal overflow-hidden`}
                         initial={{ height: 0 }}
                         animate={{ height: !openNonfat ? 0 : 'auto' }}
                     >
