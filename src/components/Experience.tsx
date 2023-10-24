@@ -37,7 +37,7 @@ const Experience = () => {
     }, [expInView, alreadyViewed])
 
     return (
-        <div className='flex flex-col justify-center items-center gap-12 bg-charcoal-light sm:gap-24 w-full min-h-screen py-8 overflow-x-hidden'>
+        <div className='flex flex-col justify-center items-center gap-12 bg-charcoal-light sm:gap-24 w-full min-h-screen py-12 overflow-x-hidden'>
             <motion.h1 className='text-5xl md:text-9xl text-center px-2 font-audiowide bg-gradient-to-b from-slate-100 to-slate-900 text-transparent bg-clip-text'
                 initial={{ opacity: 0.0, x: '100px' }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -50,6 +50,10 @@ const Experience = () => {
                 <div onClick={() => setOpenRegal(!openRegal)}>
                     <motion.div
                         className='flex flex-col justify-start relative w-full sm:max-w-[800px] h-[200px] bg-charcoal hover:cursor-pointer'
+                        initial={{ opacity: 0.15, y: 50 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ style: 'spring', duration: 0.3 }}
+                        viewport={{ once: true }}
                     >
                         <figure className='w-full h-[200px] bg-no-repeat' style={{
                             backgroundImage: `url(${office1})`,
@@ -80,6 +84,10 @@ const Experience = () => {
                 <div onClick={() => setOpenNonfat(!openNonfat)}>
                     <motion.div
                         className='flex flex-col justify-start relative w-full sm:max-w-[800px] h-[200px] bg-charcoal hover:cursor-pointer'
+                        initial={{ opacity: 0.15, y: 50 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ style: 'spring', duration: 0.7 }}
+                        viewport={{ once: true }}
                     >
                         <figure className='w-full h-[200px] bg-no-repeat' style={{
                             backgroundImage: `url(${office2})`,
