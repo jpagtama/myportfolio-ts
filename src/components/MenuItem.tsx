@@ -14,6 +14,7 @@ const MenuItem = (props: Props) => {
 
     const clickHandler = () => {
         dispatch(navActions.scrollTo(title.toLowerCase()));
+        dispatch(navActions.activate(title));
         dispatch(navActions.openMenu(false));
     }
 

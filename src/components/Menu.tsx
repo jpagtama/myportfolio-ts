@@ -23,7 +23,7 @@ function Menu({ menuItems }: Props) {
     });
 
     const menuSections = menuItems.map((item, i) => {
-        const isActive = item.toLowerCase() === activeLabel.toLowerCase();
+        const isActive = item.toLowerCase() === activeLabel.toLowerCase().replace('_', ' ');
         return <MenuItem key={i} title={item} isActive={isActive} />;
     });
 

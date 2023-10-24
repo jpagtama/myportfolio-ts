@@ -8,7 +8,7 @@ import { motion } from 'framer-motion'
 const AboutMe = () => {
     const dispatch = useDispatch()
     const { ref, inView } = useInView({
-        threshold: 0,
+        threshold: 0.10,
     })
     useEffect(() => {
         if (inView) dispatch(navActions.activate('about me'));

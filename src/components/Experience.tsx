@@ -13,7 +13,7 @@ const Experience = () => {
     const [openNonfat, setOpenNonfat] = useState(false);
     const dispatch = useDispatch();
     const { ref: ref, inView: expInView } = useInView({
-        threshold: 0,
+        threshold: 0.10,
     });
 
     useEffect(() => {

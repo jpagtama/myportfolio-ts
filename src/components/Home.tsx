@@ -10,7 +10,7 @@ import { motion } from 'framer-motion';
 const Home = () => {
     const dispatch = useDispatch()
     const { ref: ref, inView: homeInView } = useInView({
-        threshold: 0,
+        threshold: 0.10,
     })
 
     useEffect(() => {
