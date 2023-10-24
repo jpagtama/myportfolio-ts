@@ -1,12 +1,16 @@
 import { useState, useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { navActions } from '../store/navSlice';
 import { FaReact } from 'react-icons/fa';
 import { SiTypescript, SiVite, SiTailwindcss } from 'react-icons/si';
+import { BsChevronDoubleUp } from 'react-icons/bs'
 import { IconContext } from 'react-icons/lib';
 import { motion } from 'framer-motion';
 
 const Footer = () => {
     const [wiggle, setWiggle] = useState(false);
     const [emailCopied, setEmailCopied] = useState(false);
+    const dispatch = useDispatch();
 
     useEffect(() => {
         if (emailCopied) {
@@ -24,9 +28,23 @@ const Footer = () => {
         setEmailCopied(true);
     }
 
+    const scrollToTop = () => {
+        dispatch(navActions.activate('home'));
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        })
+    }
+
     return (
-        <div className='flex flex-col justify-center items-center gap-16 min-h-[75vh] p-4 bg-gradient-to-b from-zinc-950 to-black text-slate-300 text-center' >
-            <div className='flex flex-col justify-center items-center gap-6'>
+        <div className='flex flex-col justify-center items-center gap-16 min-h-[75vh] p-4 bg-gradient-to-b from-zinc-950 to-black text-slate-300 text-center relative' >
+            <button className='h-16 w-24 text-lime-700 p-0 bg-transparent hover:animate-bounce absolute -top-8' onClick={scrollToTop}>
+                <IconContext.Provider value={{ size: '100%' }}>
+                    <BsChevronDoubleUp />
+                </IconContext.Provider>
+                <span className='text-slate-600'>back to top</span>
+            </button>
+            <div className='flex flex-col justify-center items-center gap-6 mt-24'>
                 <p className='text-4xl text-center'>Let's work together.</p>
                 <p>Contact me at:
                     <button className={`hover:text-slate-100 hover:bg-lime-900 transition duration-300 outline-none ring-0 mx-2 w-48 ${wiggle ? 'animate-wiggle' : ''}`}
