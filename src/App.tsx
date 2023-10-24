@@ -1,15 +1,15 @@
 import { Provider } from 'react-redux';
 import store from './store';
 import { Routes, Route } from 'react-router-dom';
-import Main from './components/Main'
-import SideNav from './components/SideNav'
-import NotFound from './components/NotFound'
-import './App.css'
+import Main from './components/Main';
+import NavBar from './components/NavBar';
+import NotFound from './components/NotFound';
+import './App.css';
 
 const App = () => {
 
   const welcome = (<div className='min-h-screen'>
-    <SideNav /><Main />
+    <NavBar /><Main />
   </div>)
 
   const RedirectCalendar = () => {
