@@ -39,8 +39,12 @@ const Footer = () => {
                         }
                     </button>
                 </p>
+                <div className='flex justify-center gap-4'>
+                    <a className='text-lime-700 hover:text-lime-400 hover:scale-110 duration-150' href="https://www.linkedin.com/in/jpagtama" target="_blank" rel="noopener noreferrer" >linkedin</a>
+                    <a className='text-lime-700 hover:text-lime-400 hover:scale-110 duration-150' href="https://www.github.com/jpagtama" target="_blank" rel="noopener noreferrer" >github</a>
+                </div>
             </div>
-            <div className='flex flex-col justify-center items-center gap-4 text-slate-600'>
+            <div className='flex flex-col justify-center items-center gap-4'>
                 <span>Created using these technologies:</span>
                 <IconContext.Provider value={{ size: "3rem" }}>
                     <div style={{ display: "flex", gap: "1.5rem" }}>
