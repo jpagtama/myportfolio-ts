@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 import { useInView } from 'react-intersection-observer';
 import { navActions } from '../store/navSlice';
 import { FaReact, FaNode, FaGithubAlt, FaHtml5, FaCss3Alt } from 'react-icons/fa';
-import { SiTypescript, SiPostgresql, SiJest } from 'react-icons/si';
+import { SiTypescript, SiPostgresql, SiJest, SiTailwindcss } from 'react-icons/si';
 import { TbBrandJavascript, TbBrandNextjs } from 'react-icons/tb';
 import { IconContext } from 'react-icons';
 import { motion } from 'framer-motion';
@@ -72,6 +72,10 @@ const Skills = () => {
                 <motion.div className='flex flex-col gap-1 text-center w-16 h-16 sm:w-28 sm:h-28' >
                     <IconContext.Provider value={{ size: '100%', color: 'rgb(148 163 184)' }}><SiJest /></IconContext.Provider>
                     <span>Jest</span>
+                </motion.div>
+                <motion.div className='flex flex-col gap-1 text-center w-16 h-16 sm:w-28 sm:h-28' >
+                    <IconContext.Provider value={{ size: '100%', color: 'rgb(148 163 184)' }}><SiTailwindcss /></IconContext.Provider>
+                    <span>TailwindCSS</span>
                 </motion.div>
                 <motion.div className='flex flex-col gap-1 text-center w-16 h-16 sm:w-28 sm:h-28' >
                     <IconContext.Provider value={{ size: '100%', color: 'rgb(148 163 184)' }}><FaHtml5 /></IconContext.Provider>
