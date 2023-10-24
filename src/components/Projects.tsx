@@ -45,8 +45,8 @@ const Projects = () => {
                         </motion.div>
                         {/* <p >Finflexi is a fintech app that allows you to view market and company data.</p> */}
                         <div className='flex gap-4'>
-                            <a className='py-2 px-2 bg-slate-300 rounded-lg text-zinc-950 hover:scale-105 duration-200' href="https://finflexi.vercel.app" target="_blank" rel="noopener noreferrer" >Go to project</a>
-                            <a className='py-2 px-2 bg-slate-300 rounded-lg text-zinc-950 hover:scale-105 duration-200' href="https://github.com/jpagtama/finflexi" target="_blank" rel="noopener noreferrer" >View the code</a>
+                            <a className='py-2 px-2 bg-slate-300 rounded-lg text-zinc-950 hover:scale-105 hover:bg-slate-400 duration-200' href="https://finflexi.vercel.app" target="_blank" rel="noopener noreferrer" >Go to project</a>
+                            <a className='py-2 px-2 bg-slate-300 rounded-lg text-zinc-950 hover:scale-105 hover:bg-slate-400 duration-200' href="https://github.com/jpagtama/finflexi" target="_blank" rel="noopener noreferrer" >View the code</a>
                         </div>
                     </div>
                 </motion.div>
@@ -67,8 +67,8 @@ const Projects = () => {
                         </motion.div>
                         {/* <p>react-event-viewer-calendar is an npm package that allows developers to display daily events in a monthly view. It's lightweight, responsive, and customizable.</p> */}
                         <div className='flex gap-4'>
-                            <a className='py-2 px-2 bg-slate-300 rounded-lg text-zinc-950 hover:scale-105 duration-200' href="https://react-event-viewer-calendar-r34x4.ondigitalocean.app/" target="_blank" rel="noopener noreferrer" >Go to project</a>
-                            <a className='py-2 px-2 bg-slate-300 rounded-lg text-zinc-950 hover:scale-105 duration-200' href="https://github.com/jpagtama/react-event-viewer-calendar" target="_blank" rel="noopener noreferrer" >View the code</a>
+                            <a className='py-2 px-2 bg-slate-300 rounded-lg text-zinc-950 hover:scale-105 hover:bg-slate-400 duration-200' href="https://react-event-viewer-calendar-r34x4.ondigitalocean.app/" target="_blank" rel="noopener noreferrer" >Go to project</a>
+                            <a className='py-2 px-2 bg-slate-300 rounded-lg text-zinc-950 hover:scale-105 hover:bg-slate-400 duration-200' href="https://github.com/jpagtama/react-event-viewer-calendar" target="_blank" rel="noopener noreferrer" >View the code</a>
                         </div>
                     </div>
                 </motion.div>
@@ -89,8 +89,8 @@ const Projects = () => {
                         </motion.div>
                         {/* <p >Flekin is an npm package that allows developers to automatically extract the number of words, syllables, and sentences. Returns a readability score as processed by the Flesch-Kincaid formula.</p> */}
                         <div className='flex gap-4'>
-                            <a className='py-2 px-2 bg-slate-300 rounded-lg text-zinc-950 hover:scale-105 duration-200' href="https://flekin-7qyrt.ondigitalocean.app/" target="_blank" rel="noopener noreferrer" >Go to project</a>
-                            <a className='py-2 px-2 bg-slate-300 rounded-lg text-zinc-950 hover:scale-105 duration-200' href="https://github.com/jpagtama/flekin" target="_blank" rel="noopener noreferrer" >View the code</a>
+                            <a className='py-2 px-2 bg-slate-300 rounded-lg text-zinc-950 hover:scale-105 hover:bg-slate-400 duration-200' href="https://flekin-7qyrt.ondigitalocean.app/" target="_blank" rel="noopener noreferrer" >Go to project</a>
+                            <a className='py-2 px-2 bg-slate-300 rounded-lg text-zinc-950 hover:scale-105 hover:bg-slate-400 duration-200' href="https://github.com/jpagtama/flekin" target="_blank" rel="noopener noreferrer" >View the code</a>
                         </div>
                     </div>
                 </motion.div>
