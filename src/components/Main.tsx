@@ -5,8 +5,7 @@ import Experience from './Experience'
 import Section from './Section'
 import Projects from './Projects'
 import Skills from './Skills'
-import Education from './Education'
-import Interests from './Interests'
+import AboutMe from './AboutMe'
 import Footer from './Footer'
 
 interface Selector {
@@ -34,8 +33,7 @@ const Main = () => {
             <Section ><Skills /></Section>
             <Section ><Experience /></Section>
             <Section ><Projects /></Section>
-            <Section ><Education /></Section>
-            <Section ><Interests /></Section>
+            <Section ><AboutMe /></Section>
             <Footer />
         </div>
     )
