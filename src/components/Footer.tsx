@@ -29,16 +29,12 @@ const Footer = () => {
     }
 
     const scrollToTop = () => {
-        dispatch(navActions.activate('home'));
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        })
+        dispatch(navActions.scrollTo('home'));
     }
 
     return (
         <div className='flex flex-col justify-center items-center gap-16 min-h-[75vh] p-4 bg-gradient-to-b from-zinc-950 to-black text-slate-300 text-center relative' >
-            <button className='h-16 w-24 text-lime-700 p-0 bg-transparent hover:animate-bounce absolute -top-8' onClick={scrollToTop}>
+            <button className='h-16 w-24 text-lime-700 p-0 bg-transparent hover:animate-bounce hover:text-lime-500 transition duration-300 absolute -top-8' onClick={scrollToTop}>
                 <IconContext.Provider value={{ size: '100%' }}>
                     <BsChevronDoubleUp />
                 </IconContext.Provider>
