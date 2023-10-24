@@ -40,14 +40,19 @@ const AboutMe = () => {
                 >
                     <img src={profilePic} alt="Julian Pagtama image" />
                 </motion.div>
-                <motion.p className='p-4 max-w-xl leading-loose'
+                <motion.div
                     initial={{ opacity: 0.15, y: 50 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ style: 'spring', duration: 0.7 }}
                     viewport={{ once: true }}
                 >
-                    I believe that the web is more than just a collection of pages and links. It is a powerful medium for communication, collaboration, and creativity. It is a platform for expressing ideas, sharing knowledge, and building communities. It is a space where everyone can have a voice, a choice, and an impact.
-                </motion.p>
+                    <p className='p-4 max-w-xl leading-loose' >
+                        I believe that the web is more than just a collection of pages and links. It is a powerful medium for communication, collaboration, and creativity. It is a platform for expressing ideas, sharing knowledge, and building communities. It is a space where everyone can have a voice, a choice, and an impact.
+                    </p>
+                    <p className='p-4 max-w-xl leading-loose'>
+                        Not only do I enjoy creating experiences that are engaging and user-friendly, I also love creating functional applications that solve real-world problems. My career in professional web development has allowed me to synthesize front-end and back-end technologies to create complete products.
+                    </p>
+                </motion.div>
             </div>
         </div>
     )
