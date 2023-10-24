@@ -76,8 +76,8 @@ const Experience = () => {
                     >
                         <p className='self-end text-slate-500 p-4 hidden sm:block' >January 2018 - March 2021</p>
                         <p className='self-end text-slate-500 p-4 block sm:hidden' >1/2018 - 3/2021</p>
-                        <p className='w-full px-4 text-slate-400 my-4' >
-                            Developed and maintained applications for one of the largest physician-led healthcare networks in Southern California. Their applications are used among thousands of doctors and patients across hospitals and urgent care centers.
+                        <p className='w-full px-4 text-slate-400 my-4 leading-loose' >
+                            Developed and maintained HIPAA compliant applications for one of the largest physician-led healthcare networks in Southern California. Their applications are used among thousands of doctors and patients across hospitals and urgent care centers.
                         </p>
                     </motion.div>
                 </div>
@@ -110,7 +110,7 @@ const Experience = () => {
                     >
                         <p className='self-end text-slate-500 p-4 hidden sm:block' >June 2014 - January 2018</p>
                         <p className='self-end text-slate-500 p-4 block sm:hidden' >6/2014 - 1/2018</p>
-                        <p className='w-full px-4 text-slate-400 my-4' >
+                        <p className='w-full px-4 text-slate-400 my-4 leading-loose' >
                             Worked within a team to maintain and engineer a system of applications recognized by the Casting Society of America as the primary distributor of casting breakdowns. Nonfat Media creates applications for Breakdown Services, a company that provides services for casting directors, talent representatives, and actors within a seamless, casting ecosystem.
                         </p>
                     </motion.div>
