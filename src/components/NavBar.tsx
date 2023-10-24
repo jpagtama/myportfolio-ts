@@ -1,19 +1,17 @@
-import { useEffect, useState } from 'react';
 import Menu from './Menu';
 import MobileMenu from './MobileMenu';
 import { useSelector } from 'react-redux';
 import MenuButton from './MenuButton';
-import { motion, AnimatePresence, useScroll, useMotionValueEvent } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 
 interface Selector {
     nav: { showMenu: boolean }
 };
 
-const menuItems = ['About', 'Skills', 'Experience', 'Projects', 'Education', 'Interests'];
+const menuItems = ['Home', 'Skills', 'Experience', 'Projects', 'About Me'];
 
-const SideNav = () => {
+const NavBar = () => {
     const { showMenu } = useSelector((state: Selector) => state.nav);
-
 
     return (
         <nav className='flex justify-center w-full fixed top-0 z-10' >
@@ -38,4 +36,4 @@ const SideNav = () => {
         </nav>
     )
 }
-export default SideNav
+export default NavBar;
