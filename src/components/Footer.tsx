@@ -33,7 +33,7 @@ const Footer = () => {
     }
 
     return (
-        <div className='flex flex-col justify-center items-center gap-16 min-h-[75vh] p-4 bg-gradient-to-b from-zinc-950 to-black text-slate-300 text-center relative' >
+        <div className='flex flex-col justify-center items-center gap-16 h-[600px] sm:min-h-[75vh] p-4 bg-gradient-to-b from-zinc-950 to-black text-slate-300 text-center relative' >
             <button className='h-16 w-24 text-lime-700 p-0 bg-transparent hover:animate-bounce hover:text-lime-500 transition duration-300 absolute -top-8' onClick={scrollToTop}>
                 <IconContext.Provider value={{ size: '100%' }}>
                     <BsChevronDoubleUp />
