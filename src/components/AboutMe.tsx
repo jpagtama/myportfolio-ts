@@ -43,7 +43,7 @@ const AboutMe = () => {
                         <span className='font-bold text-slate-300'>I believe that the web is more than just a collection of pages and links.</span> It is a powerful medium for communication, collaboration, and creativity. It is a platform for expressing ideas, sharing knowledge, and building communities. It is a space where everyone can have a voice, a choice, and an impact.
                     </p>
                     <p className='p-4 max-w-xl leading-loose'>
-                        <span className='font-bold text-slate-300'>I love creating functional applications that solve real-world problems.</span> My career in professional web development has allowed me to synthesize front-end and back-end technologies into complete products that focuses on intuitive user-experience and optimal data structures. I'm constantly learning new technologies and love to collaborate and share my knowledge and experience.
+                        <span className='font-bold text-slate-300'>I love creating functional applications that solve real-world problems.</span> My career in professional web development has allowed me to integrate front-end and back-end technologies into complete products that focuses on intuitive user-experience and optimal data structures.
                     </p>
                 </motion.div>
             </div>
