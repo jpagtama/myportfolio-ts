@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
-import { useDispatch } from 'react-redux';
-import { navActions } from '../store/navSlice';
+import { useDispatch, useSelector } from 'react-redux';
+import { RootState } from '../store';
 import { FaReact } from 'react-icons/fa';
 import { SiTypescript, SiVite, SiTailwindcss } from 'react-icons/si';
 import { BsChevronDoubleUp } from 'react-icons/bs'
@@ -10,7 +10,6 @@ import { motion } from 'framer-motion';
 const Footer = () => {
     const [wiggle, setWiggle] = useState(false);
     const [emailCopied, setEmailCopied] = useState(false);
-    const dispatch = useDispatch();
 
     useEffect(() => {
         if (emailCopied) {
@@ -29,7 +28,8 @@ const Footer = () => {
     }
 
     const scrollToTop = () => {
-        dispatch(navActions.scrollTo('home'));
+        const element = document.getElementById('home');
+        element?.scrollIntoView({ behavior: "smooth" });
     }
 
     return (
