@@ -21,7 +21,7 @@ const MobileMenu = ({ menuItems }: Props) => {
 
     return (
         <nav className='flex flex-col items-center h-full w-full'>
-            <motion.ul className='flex flex-col gap-12 mt-24 text-slate-200'>
+            <motion.ul className='flex flex-col gap-12 mt-24 text-black'>
                 {menuSections}
             </motion.ul>
         </nav>
