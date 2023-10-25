@@ -8,7 +8,7 @@ import './App.css';
 
 const App = () => {
 
-  const welcome = (<div className='min-h-screen'>
+  const welcome = (<div className='min-h-screen overscroll-none'>
     <NavBar /><Main />
   </div>)
 
