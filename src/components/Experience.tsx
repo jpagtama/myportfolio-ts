@@ -12,13 +12,13 @@ const Experience = () => {
     const [openRegal, setOpenRegal] = useState(false);
     const [openNonfat, setOpenNonfat] = useState(false);
     const dispatch = useDispatch();
-    const { ref: ref, inView: expInView } = useInView({
+    const { ref, inView } = useInView({
         threshold: 0.10,
     });
 
     useEffect(() => {
-        if (expInView) dispatch(navActions.activate('experience'));
-    }, [expInView, dispatch]);
+        if (inView) dispatch(navActions.activate('experience'));
+    }, [inView, dispatch]);
 
     return (
         <div id='experience' ref={ref} className='flex flex-col justify-center items-center gap-12 bg-charcoal-light sm:gap-24 w-full h-[1400px] sm:min-h-screen py-12 overflow-x-hidden overflow-y-hidden'>
