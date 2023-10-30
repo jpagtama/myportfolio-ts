@@ -35,7 +35,7 @@ const Projects = () => {
                     viewport={{ once: true }}
                 >
                     <img className='' src={finflexiGif} alt="finflexi demo" />
-                    <div className='flex flex-col justify-around items-center w-[400px] h-[300px] p-4 bg-gradient-to-bl from-slate-700 to-lime-900 absolute top-0 opacity-0 hover:opacity-100 duration-200'>
+                    <div className='flex flex-col justify-around items-center max-w-[400px] w-full max-h-[300px] h-full p-4 bg-gradient-to-bl from-slate-700 to-lime-900 absolute top-0 opacity-0 hover:opacity-100 duration-200'>
                         <motion.div className='flex flex-col justify-center items-center'
                             initial={{ y: 100, opacity: 0 }}
                             animate={{ y: 0, opacity: 1 }}
@@ -57,7 +57,7 @@ const Projects = () => {
                     viewport={{ once: true }}
                 >
                     <img src={calendarGif} alt="calendar demo" />
-                    <div className='flex flex-col justify-around items-center w-[400px] h-[300px] p-4 bg-gradient-to-bl from-slate-700 to-lime-900 absolute top-0 opacity-0 hover:opacity-100 duration-200'>
+                    <div className='flex flex-col justify-around items-center max-w-[400px] w-full max-h-[300px] h-full p-4 bg-gradient-to-bl from-slate-700 to-lime-900 absolute top-0 opacity-0 hover:opacity-100 duration-200'>
                         <motion.div className='flex flex-col justify-center items-center'
                             initial={{ y: 100, opacity: 0 }}
                             animate={{ y: 0, opacity: 1 }}
@@ -79,7 +79,7 @@ const Projects = () => {
                     viewport={{ once: true }}
                 >
                     <img src={flekinGif} alt="flekin demo" />
-                    <div className='flex flex-col justify-around items-center w-[400px] h-[300px] p-4 bg-gradient-to-bl from-slate-700 to-lime-900 absolute top-0 opacity-0 hover:opacity-100 duration-200'>
+                    <div className='flex flex-col justify-around items-center max-w-[400px] w-full max-h-[300px] h-full p-4 bg-gradient-to-bl from-slate-700 to-lime-900 absolute top-0 opacity-0 hover:opacity-100 duration-200'>
                         <motion.div className='flex flex-col justify-center items-center'
                             initial={{ y: 100, opacity: 0 }}
                             animate={{ y: 0, opacity: 1 }}
