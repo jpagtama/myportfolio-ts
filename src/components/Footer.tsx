@@ -60,7 +60,7 @@ const Footer = () => {
             </div>
             <div className='flex flex-col justify-center items-center gap-4'>
                 <span>Created using these technologies:</span>
-                <IconContext.Provider value={{ size: "3rem" }}>
+                <IconContext.Provider value={{ size: "40px" }}>
                     <div style={{ display: "flex", gap: "1.5rem" }}>
                         <SiVite />
                         <FaReact />
