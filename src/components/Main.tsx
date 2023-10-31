@@ -30,7 +30,7 @@ const Main = () => {
     }, [scrollTo]);
 
     return (
-        <div className="flex flex-col w-screen h-min-screen overscroll-none overflow-hidden" >
+        <div className="flex flex-col min-w-[320px] w-screen min-h-screen overscroll-none overflow-hidden" >
             <Section ><Home /></Section>
             <Section ><Skills /></Section>
             <Section ><Experience /></Section>
