@@ -15,8 +15,8 @@ const AboutMe = () => {
     }, [inView, dispatch]);
 
     return (
-        <div id='about me' ref={ref} className='flex flex-col justify-center items-center gap-12 sm:gap-24 w-full h-[1250px] sm:min-h-screen overflow-x-hidden overflow-y-hidden py-12'>
-            <motion.h1 className='text-5xl md:text-9xl text-center px-2 font-audiowide bg-gradient-to-b from-slate-100 to-slate-900 text-transparent bg-clip-text'
+        <div className='flex flex-col justify-center items-center gap-12 sm:gap-24 w-full h-[1250px] sm:min-h-screen overflow-x-hidden overflow-y-hidden py-12'>
+            <motion.h1 id='about me' ref={ref} className='text-5xl md:text-9xl text-center px-2 font-audiowide bg-gradient-to-b from-slate-100 to-slate-900 text-transparent bg-clip-text'
                 initial={{ opacity: 0.0, x: '-100px' }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.3 }}

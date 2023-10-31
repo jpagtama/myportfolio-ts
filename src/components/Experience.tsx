@@ -21,8 +21,8 @@ const Experience = () => {
     }, [inView, dispatch]);
 
     return (
-        <div id='experience' ref={ref} className='flex flex-col justify-center items-center gap-12 bg-charcoal-light sm:gap-24 w-full h-[1400px] sm:min-h-screen py-12 overflow-x-hidden overflow-y-hidden'>
-            <motion.h1 className='text-5xl md:text-9xl text-center px-2 font-audiowide bg-gradient-to-b from-slate-100 to-slate-900 text-transparent bg-clip-text'
+        <div className='flex flex-col justify-center items-center gap-12 bg-charcoal-light sm:gap-24 w-full h-[1400px] sm:min-h-screen py-12 overflow-x-hidden overflow-y-hidden'>
+            <motion.h1 id='experience' ref={ref} className='text-5xl md:text-9xl text-center px-2 font-audiowide bg-gradient-to-b from-slate-100 to-slate-900 text-transparent bg-clip-text'
                 initial={{ opacity: 0.0, x: '100px' }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.3 }}
