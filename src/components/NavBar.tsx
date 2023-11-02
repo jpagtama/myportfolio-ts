@@ -4,11 +4,13 @@ import { useSelector } from 'react-redux';
 import { RootState } from '../store';
 import MenuButton from './MenuButton';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useEffect } from 'react';
 
 const menuItems = ['Home', 'Skills', 'Experience', 'Projects', 'About Me'];
 
 const NavBar = () => {
     const { showMenu } = useSelector((state: RootState) => state.nav);
+    const { mode } = useSelector((state: RootState) => state.theme);
 
     return (
         <nav className='flex justify-center w-full fixed top-0 z-10' >
