@@ -34,11 +34,11 @@ const Footer = () => {
 
     return (
         <div className='flex flex-col justify-center items-center gap-16 h-[600px] sm:min-h-[75vh] p-4 bg-gradient-to-b from-zinc-950 to-black text-slate-300 text-center relative' >
-            <button className='h-16 w-24 text-lime-700 p-0 bg-transparent hover:animate-bounce hover:text-lime-500 transition duration-300 absolute -top-8' onClick={scrollToTop}>
+            <button className='group h-16 w-24 text-lime-700 p-0 bg-transparent hover:animate-bounce hover:text-lime-500 transition duration-300 absolute -top-8' onClick={scrollToTop}>
                 <IconContext.Provider value={{ size: '100%' }}>
                     <BsChevronDoubleUp />
                 </IconContext.Provider>
-                <span className='text-slate-600'>back to top</span>
+                <span className='text-slate-600 group-hover:text-slate-300 duration-300'>back to top</span>
             </button>
             <div className='flex flex-col justify-center items-center gap-6 mt-24'>
                 <p className='text-4xl text-center'>Let's work together.</p>
