@@ -5,6 +5,8 @@ import { navActions } from '../store/navSlice';
 import flekinGif from '../assets/flekin_med.gif';
 import calendarGif from '../assets/calendar.gif';
 import finflexiProjectImg from '../assets/finflexi_project_image.webp';
+import calendarProjectImg from '../assets/react-calendar-project.png';
+import flekinProjectImg from '../assets/flekin-project.png';
 import { motion } from 'framer-motion';
 
 const Projects = () => {
@@ -56,7 +58,7 @@ const Projects = () => {
                     transition={{ style: 'spring', duration: 0.7, delay: 0.2 }}
                     viewport={{ once: true }}
                 >
-                    <img src={calendarGif} alt="calendar demo" />
+                    <img src={calendarProjectImg} alt="calendar project" />
                     <div className='flex flex-col justify-around items-center max-w-[400px] w-full max-h-[300px] h-full p-4 bg-gradient-to-bl from-slate-700 to-lime-900 absolute top-0 opacity-0 hover:opacity-100 duration-200'>
                         <motion.div className='flex flex-col justify-center items-center'
                             initial={{ y: 100, opacity: 0 }}
@@ -78,7 +80,7 @@ const Projects = () => {
                     transition={{ style: 'spring', duration: 0.7, delay: 0.4 }}
                     viewport={{ once: true }}
                 >
-                    <img src={flekinGif} alt="flekin demo" />
+                    <img src={flekinProjectImg} alt="flekin project" />
                     <div className='flex flex-col justify-around items-center max-w-[400px] w-full max-h-[300px] h-full p-4 bg-gradient-to-bl from-slate-700 to-lime-900 absolute top-0 opacity-0 hover:opacity-100 duration-200'>
                         <motion.div className='flex flex-col justify-center items-center'
                             initial={{ y: 100, opacity: 0 }}
