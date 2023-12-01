@@ -21,7 +21,7 @@ const MenuItem = (props: Props) => {
     return (
         <motion.li
             onClick={clickHandler}
-            className={`${isActive ? 'text-white' : ''} text-4xl sm:text-xl md:text-lg lg:text-3xl cursor-pointer hover:text-white`}
+            className={`${isActive ? 'text-white' : 'text-slate-400'} text-4xl sm:text-xl md:text-lg lg:text-3xl cursor-pointer hover:text-white`}
             initial={{ opacity: 0, y: -50 }}
             animate={{ opacity: 1, y: 0 }}
             whileHover={{ scale: 1.10 }}
